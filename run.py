@@ -52,6 +52,7 @@ def start_game():
 
         elif settings == "2":
             options = True
+            select_game_level()
 
         elif settings == "3":
             options = True
@@ -65,10 +66,30 @@ def select_game_level():
     Function to select level
     """
     print("Please select a level\n")
-    print("Press E for Easy")
-    print("Press N for Normal")
-    print("Press H for Hard")
+    print("Press e for Easy")
+    print("Press n for Normal")
+    print("Press h for Hard")
+    level = False
 
+    while not level:
+        options = input("\n ").lower()
+        if options == "e":
+            level = True
+            level_lives = 10
+            return level_lives
+
+        elif options == "n":
+            level = True
+            level_lives = 7
+            return level_lives
+
+        elif options == "h":
+            level = True
+            level_lives = 5
+            return level_lives
+
+        else:
+            print("\n Please choose E, N or H to select your level")
 
 
 def get_random_word():
@@ -103,7 +124,7 @@ def main():
     """
     Runs functions used for the Game
     """
-select_game_level()
+    game_intro()
+    start_game()
 
 main()
-
