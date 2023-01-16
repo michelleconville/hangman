@@ -60,6 +60,15 @@ def start_game():
         else:
             print(" Please select 1, 2 or 3 to make your choice")
 
+def select_game_level():
+    """
+    Function to select level
+    """
+    print("Please select a level\n")
+    print("Press E for Easy")
+    print("Press N for Normal")
+    print("Press H for Hard")
+
 
 
 def get_random_word():
@@ -94,7 +103,7 @@ def main():
     """
     Runs functions used for the Game
     """
-    game_intro()
-    start_game()
+select_game_level()
 
 main()
+
