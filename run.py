@@ -2,6 +2,7 @@ import random
 
 import colorama
 from colorama import Fore, Style
+from lives import lives_left
 
 colorama.init(autoreset=True)
 
@@ -55,6 +56,14 @@ def game_rules():
     print("When you reach 0 lives your will be HANGED!")
     print("Good luck")
     print("Press enter to return to the main menu")
+
+
+def hangman_lives(lives):
+    """
+    Displays Hangman visuals
+    """
+    for _ in lives_left:
+        return lives_left[lives]
 
 def main():
     """
