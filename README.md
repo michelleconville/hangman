@@ -16,6 +16,17 @@ The player inputs a letter into the terminal, if the letter appears in the count
 
 
 ## User experience
+Users
+1.	I want to be able to choose the level
+2.	I want to play a fun and challenging game
+3.	I want a visual aid to see how many lives I have left
+4.	I want to read the rules of the game and understand how to play the game 
+5.	I want to get a notification when the game is over 
+6.	I want to have the choice to play the game again or to exit the game
+
+Site owner
+
+7.	I want users to be able to easily navigate the game
 
 
 ## Design
