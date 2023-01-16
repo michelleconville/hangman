@@ -42,6 +42,23 @@ def start_game():
     print("Press 1 to Start playing game")
     print("Press 2 to Choose the level to play at")
     print("Press 3 to Read the rules")
+    options = False
+    while not options:
+        settings = input("\n ")
+        if settings == "1":
+            options = True
+            difficulty = "default"
+            return difficulty
+
+        elif settings == "2":
+            options = True
+
+        elif settings == "3":
+            options = True
+            game_rules()
+
+        else:
+            print(" Please select 1, 2 or 3 to make your choice")
 
 
 
