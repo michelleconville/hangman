@@ -8,7 +8,7 @@ colorama.init(autoreset=True)
 
 def game_intro():
     '''
-    Game welcome and request users name and prints Hello users name
+    Game welcome and request users name and prints Hello name
     '''
     print(
         """
@@ -33,10 +33,8 @@ def game_intro():
         if name.isalpha() is not True:
             print("Error: Your name must be alphabetic only.\n")
         else:
-            print(f'Hello {name}!')
+            print(f'{Fore.YELLOW+Style.BRIGHT}Hello {name}!')
             return name
-
-game_intro()
 
 def get_random_word():
     """
@@ -44,3 +42,12 @@ def get_random_word():
     """
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
     return random_word.upper()
+
+
+def main():
+    """
+    Runs functions used for the Game
+    """
+    game_intro()
+
+main()
