@@ -54,6 +54,71 @@ Site owner
 
 
 ## Deployment
+The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Hangman – World Countries](https://world-countries-hangman.herokuapp.com/) 
+
+### Github
+
+This project was developed utilising the [Code Institute Template]( https://github.com/Code-Institute-Org/python-essentials-template). Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
+
+Gitpod was used to write the code and push the code to repository created in github.
+
+The git commands I used to push the code from gitpod to github were
+
+`git add .` - This command was used to add the file(s) to the staging area before they are committed.
+
+`git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
+
+`git push` - This command was used to push all committed code to the remote repository on github.
+
+#### Deployment to github pages
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+*   In the GitHub repository, navigate to the Settings tab
+*   From the menu on left select *pages*
+*   From the source section drop-down menu, select the Branch: main
+*   Click the *save* button
+*   A live link will be displayed in a green banner when published successfully.
+
+View the [Live site](https://michelleconville.github.io/under-the-sea/)
+
+#### Clone the repository
+The steps to clone a repository are as follows:
+1.	Navigate to the GitHub repository you would like to clone
+2.	Click on the code drop down button
+3.	Click on the HTTPS tab
+4.	Copy the repository link to the clipboard
+5.	Open Git Bash
+6.	Change the current working directory to the one where you want the cloned directory
+7.	Type git clone and then paste the URL from the clipboard 
+
+    `git clone https://github.com/michelleconville/under-the-sea.git`
+8.	Press Enter to create your local clone.
+
+The repository will now be cloned on your local machine for use.
+
+### Herouku
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and Colorama imports for deployment
+
+#### Setting up a new app
+1. Log in to [Heroku]( https://id.heroku.com/login) 
+2. Click the button labelled **New** from the dashboard in the top right corner and from the drop-down menu select **Create New App**.
+3. A unique app name must be used.
+4. Next, select your region, (I chose Europe as I am in Ireland).
+5. Click on the **Create App** button.
+
+#### Updating the settings 
+* Click on the **Settings Tab** and scroll down to **Add Buildpack** 
+* Select **python** and click **Save Changes**, then add **node.js**.
+* **Note:** The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
+
+#### Deploying the application
+* Scroll to the top of the page and now choose the **Deploy** tab.
+* Select **Github** as the deployment method.
+* Confirm you want to connect to GitHub.
+* Search for the repository name and click the connect button.
+
+Scroll to the bottom of the deploy page and select preferred deployment type:
+* Click either **Enable Automatic Deploys** for automatic deployment when you push updates to Github.
+* Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
 
 
 ## Technologies used
