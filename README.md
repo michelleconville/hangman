@@ -42,16 +42,13 @@ Site owner
 
 
 ### Validation
-[pep8 online](http://pep8online.com/) was used for validating the python files. 
+[pep8 online](https://pep8ci.herokuapp.com/) was used for validating the python files. 
 
 <details>
 <summary>Lives page</summary>
 
 ![lives.py](assets/images/pep8-lives.JPG)
 </details>
-
-
-### Responsiveness
 
 
 ### Testing user stories
@@ -91,7 +88,7 @@ The steps to clone a repository are as follows:
 The repository will now be cloned on your local machine for use.
 
 ### Herouku
-Before deploying to Heroku pip3 freeze > requirements.txt was used to add pyfiglet and Colorama imports for deployment
+Before deploying to Heroku pip3 freeze > requirements.txt was used to add Colorama imports for deployment
 
 #### Setting up a new app
 1. Log in to [Heroku]( https://id.heroku.com/login) 
