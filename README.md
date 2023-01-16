@@ -42,6 +42,13 @@ Site owner
 
 
 ### Validation
+[pep8 online](http://pep8online.com/) was used for validating the python files. 
+
+<details>
+<summary>Lives page</summary>
+
+![lives.py](assets/images/pep8-lives.JPG)
+</details>
 
 
 ### Responsiveness
@@ -70,16 +77,6 @@ The git commands I used to push the code from gitpod to github were
 
 `git push` - This command was used to push all committed code to the remote repository on github.
 
-#### Deployment to github pages
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-*   In the GitHub repository, navigate to the Settings tab
-*   From the menu on left select *pages*
-*   From the source section drop-down menu, select the Branch: main
-*   Click the *save* button
-*   A live link will be displayed in a green banner when published successfully.
-
-View the [Live site](https://michelleconville.github.io/under-the-sea/)
-
 #### Clone the repository
 The steps to clone a repository are as follows:
 1.	Navigate to the GitHub repository you would like to clone
@@ -89,8 +86,6 @@ The steps to clone a repository are as follows:
 5.	Open Git Bash
 6.	Change the current working directory to the one where you want the cloned directory
 7.	Type git clone and then paste the URL from the clipboard 
-
-    `git clone https://github.com/michelleconville/under-the-sea.git`
 8.	Press Enter to create your local clone.
 
 The repository will now be cloned on your local machine for use.
