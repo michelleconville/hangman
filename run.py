@@ -17,7 +17,7 @@ def game_intro():
         ██      █████      ██    ███████     ██████  ██      ███████   ████
         ██      ██         ██         ██     ██      ██      ██   ██    ██
         ███████ ███████    ██    ███████     ██      ███████ ██   ██    ██
- 
+
         ██   ██  █████  ███    ██  ██████  ███    ███  █████  ███    ██
         ██   ██ ██   ██ ████   ██ ██       ████  ████ ██   ██ ████   ██
         ███████ ███████ ██ ██  ██ ██   ███ ██ ████ ██ ███████ ██ ██  ██
@@ -26,6 +26,15 @@ def game_intro():
         """
     )
     print("Welcome")
+    name = " "
+    while True:
+        name = input("Please enter your name: \n")
+
+        if name.isalpha() is not True:
+            print("Error: Your name must be alphabetic only.\n")
+        else:
+            print(f'Hello {name}!')
+            return name
 
 game_intro()
 
