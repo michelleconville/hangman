@@ -1,5 +1,5 @@
 import random
-
+import os
 import colorama
 from colorama import Fore, Style
 from lives import lives_left
@@ -101,7 +101,7 @@ def get_random_word():
     Picks a random word from words.txt
     """
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
-    return random_word.upper()
+    return random_word.lower()
 
 
 def game_rules():
@@ -172,9 +172,9 @@ def play_game(word, num_lives):
                 if '﹍' not in word_to_guess:
                     game_over = True
 
-    except ValueError as input_error:
-        print(f'{input_error}\n Please try again.\n')
-        continue
+        except ValueError as input_error:
+            print(f'{input_error}\n Please try again.\n')
+            continue
 
     print(hangman_lives(lives))
 
@@ -260,7 +260,14 @@ def restart_game():
 
         except ValueError as e_values:
             print(f"{e_values}.\n{Fore.RED+Style.BRIGHT}"
-                  f"Please Try again Thank You :D\n")
+                  f"Please try again\n")
+
+
+def clear_screen():
+    """
+    Used to clear Terminal screen
+    """
+    os.system("clear")
 
 
 def main():
@@ -268,6 +275,13 @@ def main():
     Runs functions used for the Game
     """
     game_intro()
-    start_game()
+    level = start_game()
+    if level == "default":
+        num_lives = 10
+    else:
+        num_lives = select_game_level()
+        word = get_random_word()
+
+        play_game(word, num_lives)
 
 main()
