@@ -108,13 +108,13 @@ def game_rules():
     """
     Explains to the User how to play the game
     """
-    print("Welcome to World Countires Hangman rules")
+    print(f'{Fore.CYAN+Style.BRIGHT}Welcome to World Countires Hangman rules \n')
     print("This is a guess the word game")
     print("Guess the word by inputting letters")
     print("If you guess the wrong letter you loose a life")
     print("Your Hang-Hangman will then start to build")
-    print("When you reach 0 lives your will be HANGED!")
-    print("Good luck")
+    print("When you reach 0 lives your will be HANGED! \n")
+    print(f'{Fore.MAGENTA+Style.BRIGHT}Good luck \n')
     print("Press enter to return to the main menu")
 
 
