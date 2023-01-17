@@ -194,10 +194,12 @@ def play_game(word, num_lives):
 
     if game_over:
         print(f'Well done! You guessed the word: {word}')
+        win_game()
     else:
         print('You have no lives left.')
         print('Game over.\n')
         print(f'The word you were looking for was: {word}')
+        game_over()
 
     restart_game(num_lives)
 

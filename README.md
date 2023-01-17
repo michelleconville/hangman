@@ -11,11 +11,19 @@ Hangman is an age-old guessing game, traditionally played as a paper and pencil 
 ## How to Play
 In this Hangman game players aim to guess the hidden name of a country. The country is represented by a series of dashes, each representing one letter in the country name. 
 
-The player inputs a letter into the terminal, if the letter appears in the country name the corresponding dash will be replaced with the letter. If the letter does not appear they will lose a life. Players continue to enter letters until they correctly guess the country name or until they have exhausted all their lives.
+The player inputs a letter into the terminal:
+* If the letter appears in the country name the corresponding dash will be replaced with the letter.
+* If the letter does not appear they will lose a life. 
 
+Players continue to enter letters until they correctly guess the country name or until they have exhausted all their lives.
 
 
 ## User experience
+### Target Audience
+
+Anyone who want to play an online command-line interface game for a fun challenge.
+
+### User stories
 Users
 1.	I want to be able to choose the level
 2.	I want to play a fun and challenging game
@@ -29,7 +37,20 @@ Site owner
 7.	I want users to be able to easily navigate the game
 
 
-## Design
+## Planning
+Logic workflow
+During the planning process I thought about the basic steps needed to play a game of hangman,  I drew a workflow to help guide the coding process whilst developing the game. The flow chart is rough and it was a starting point for me, more consideration appears as I practically worked through the coding process.
+
+Areas I considered before beginning the coding:
+Where to use inputs & check inputs
+Where to give user feed back
+Where to give choices and direct of game from those choices
+
+<details>
+<summary>logic workflow</summary>
+
+![lives.py](assets/images/logic-workflow.jpg)
+</details>
 
 
 ### Structure
