@@ -150,16 +150,19 @@ def play_game(word, num_lives):
                     f"\nYou can't guess more than one letter at a time."
                     f'You guessed: {len(user_guess)}'
                 )
+
             elif not user_guess.isalpha():
                 raise ValueError(
                     f'\nYou can only guess by letters.'
-                    f'You guessed: {user_guess}'
+                    f'You guessed: {(user_guess)}'
                 )
+
             elif len(user_guess) == 1 and user_guess.isalpha():
                 if user_guess in guesses:
                     raise ValueError(
-                        f'\n{user_guess} has already been used.'
+                        f'\n{(user_guess)} has already been used.'
                     )
+
             elif user_guess not in word:
                 print(f'Sorry.. {user_guess} is not a part of the word.')
                 print('Better luck next time, you lost a life..')
@@ -168,12 +171,12 @@ def play_game(word, num_lives):
             else:
                 print(f'\n{user_guess} is a part of the word, great job!')
                 guesses.append(user_guess)
-                guessed_words = list(word_to_guess)
+                guessed_words_list = list(word_to_guess)
                 indices = [i for i, letter in enumerate(word)
                            if letter == user_guess]
                 for index in indices:
-                    guessed_words[index] = user_guess
-                    word_to_guess = ''.join(guessed_words)
+                    guessed_words_list[index] = user_guess
+                    word_to_guess = ''.join(guessed_words_list)
                 if '﹍' not in word_to_guess:
                     game_over = True
 
@@ -194,7 +197,7 @@ def play_game(word, num_lives):
     else:
         print('You have no lives left.')
         print('Game over.\n')
-        print(f'The word we were looking for was: {word}')
+        print(f'The word you were looking for was: {word}')
 
     restart_game()
 
