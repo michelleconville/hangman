@@ -126,7 +126,7 @@ def game_over():
     """
     Graphic for game over display
     """
-print(
+print(Fore.GREEN+Style.BRIGHT + 
         """
          _____
         / ____|
