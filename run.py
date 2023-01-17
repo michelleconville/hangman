@@ -130,7 +130,7 @@ def game_over():
     """
     Graphic for game over display
     """
-    print(Fore.GREEN+Style.BRIGHT +
+    print(Fore.RED+Style.BRIGHT +
         """
          ██████   █████  ███    ███ ███████
         ██       ██   ██ ████  ████ ██
