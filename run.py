@@ -34,11 +34,13 @@ def game_intro():
         if name.isalpha() is not True:
             print("Error: Your name must be alphabetic only.\n")
         else:
+            print("\n")
             print(f'{Fore.YELLOW+Style.BRIGHT}Hello {name}!')
             return name
 
 def start_game():
 
+    print("\n")
     print("Press 1 to Start playing game")
     print("Press 2 to Choose the level to play at")
     print("Press 3 to Read the rules")
@@ -120,11 +122,26 @@ def hangman_lives(lives):
     for _ in lives_left:
         return lives_left[lives]
 
+def game_over():
+    """
+    Graphic for game over display
+    """
+print(
+        """
+         _____
+        / ____|
+        | |  __  __ _ _ __ ___   ___    _____   _____ _ __ 
+        | | |_ |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__|
+        | |__| | (_| | | | | | |  __/ | (_) \ V /  __/ |
+         \_____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|
+
+        """
+    )
+
 def main():
     """
     Runs functions used for the Game
     """
-    game_intro()
-    start_game()
+    game_over()
 
 main()
