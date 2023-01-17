@@ -125,6 +125,16 @@ def hangman_lives(lives):
     for _ in lives_left:
         return lives_left[lives]
 
+def play_game(word, num_lives):
+    """
+    Runs the game and starts all the gameplay logic.
+    """
+    word_to_guess = '﹍' * len(word)
+    game_over = False
+    guesses = []
+    lives = num_lives
+    print(f'\nLives: {lives}\n')
+    print('What country are you looking for? '+' '.join(word_to_guess) + '\n')
 
 def game_over():
     """
