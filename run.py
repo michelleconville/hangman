@@ -38,6 +38,7 @@ def game_intro():
             print(f'{Fore.YELLOW+Style.BRIGHT}Hello {name}!')
             return name
 
+
 def start_game():
 
     print("\n")
@@ -62,6 +63,7 @@ def start_game():
 
         else:
             print(" Please select 1, 2 or 3 to make your choice")
+
 
 def select_game_level():
     """
@@ -101,6 +103,7 @@ def get_random_word():
     random_word = random.choice(open("words.txt", "r").read().split('\n'))
     return random_word.upper()
 
+
 def game_rules():
     """
     Explains to the User how to play the game
@@ -122,26 +125,33 @@ def hangman_lives(lives):
     for _ in lives_left:
         return lives_left[lives]
 
+
 def game_over():
     """
     Graphic for game over display
     """
-print(Fore.GREEN+Style.BRIGHT + 
+    print(Fore.GREEN+Style.BRIGHT +
         """
-         _____
-        / ____|
-        | |  __  __ _ _ __ ___   ___    _____   _____ _ __ 
-        | | |_ |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__|
-        | |__| | (_| | | | | | |  __/ | (_) \ V /  __/ |
-         \_____|\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|
+         ██████   █████  ███    ███ ███████
+        ██       ██   ██ ████  ████ ██
+        ██   ███ ███████ ██ ████ ██ █████
+        ██    ██ ██   ██ ██  ██  ██ ██
+         ██████  ██   ██ ██      ██ ███████
 
+         ██████  ██    ██ ███████ ██████
+        ██    ██ ██    ██ ██      ██   ██
+        ██    ██ ██    ██ █████   ██████
+        ██    ██  ██  ██  ██      ██   ██
+         ██████    ████   ███████ ██   ██
         """
     )
+
 
 def main():
     """
     Runs functions used for the Game
     """
-    game_over()
+    game_intro()
+    start_game()
 
 main()
