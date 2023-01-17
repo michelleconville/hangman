@@ -43,7 +43,12 @@ def game_intro():
 
 
 def start_game():
-
+    '''
+    Starts the game with options:
+    1 to play - default level easy
+    2 to select level of play
+    3 to see the game rules
+    '''
     print("\n")
     print("Press 1 to Start playing game")
     print("Press 2 to Choose the level to play at")
@@ -53,23 +58,18 @@ def start_game():
         settings = input("\n ")
         if settings == "1":
             options = True
-            clear_screen()
             difficulty = "default"
             return difficulty
 
         elif settings == "2":
             options = True
-            clear_screen()
-            select_game_level()
 
         elif settings == "3":
             options = True
-            clear_screen()
             game_rules()
 
         else:
             print(" Please select 1, 2 or 3 to make your choice")
-        clear_screen()
 
 
 def select_game_level():
@@ -80,25 +80,23 @@ def select_game_level():
     print("Press e for Easy")
     print("Press n for Normal")
     print("Press h for Hard")
-    level = False
-
-    while not level:
+    difficulty = False
+    while not difficulty:
         options = input("\n ").lower()
         if options == "e":
-            level = True
-            level_lives = 10
-            return level_lives
+            difficulty = True
+            num_lives = 10
+            return num_lives
 
         elif options == "n":
-            level = True
-            level_lives = 7
-            return level_lives
+            difficulty = True
+            num_lives = 7
+            return num_lives
 
         elif options == "h":
-            level = True
-            level_lives = 5
-            return level_lives
-
+            difficulty = True
+            num_lives = 5
+            return num_lives
         else:
             print("\n Please choose E, N or H to select your level")
 
