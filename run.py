@@ -199,7 +199,7 @@ def play_game(word, num_lives):
         print('Game over.\n')
         print(f'The word you were looking for was: {word}')
 
-    restart_game()
+    restart_game(num_lives)
 
 
 def game_over():
@@ -220,7 +220,7 @@ def game_over():
         ██    ██  ██  ██  ██      ██   ██
          ██████    ████   ███████ ██   ██
         """
-    )
+        )
 
 def win_game():
     """
@@ -243,16 +243,16 @@ def win_game():
     )
 
 
-def restart_game():
+def restart_game(num_lives):
     """
-    Gives User the choice to Restart the Game or Return to main screen
+    Gives the user the option to restart the game or return to main screen
     """
     game_restart = False
 
     while not game_restart:
         restart = input(f"{Fore.GREEN+Style.BRIGHT}"
-                        f"Would You Like To Play Again :) ? "
-                        f"Please Type y for Yes & n for No: ").lower()
+                        f"Would you like yo play again"
+                        f"Please type y for Yes & n for No: ").lower()
         try:
             if restart == "y":
                 game_restart = True
@@ -264,7 +264,7 @@ def restart_game():
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"Please type either y or n,"
-                                 f"to make your Choice.You typed{(restart)}")
+                                 f"to make your choice. You typed{(restart)}")
 
         except ValueError as e_values:
             print(f"{e_values}.\n{Fore.RED+Style.BRIGHT}"
@@ -283,12 +283,12 @@ def main():
     Runs functions used for the Game
     """
     game_intro()
-    level = start_game()
-    if level == "default":
+    difficulty = start_game()
+    if difficulty == "default":
         num_lives = 10
     else:
         num_lives = select_game_level()
     word = get_random_word()
     play_game(word, num_lives)
-   
+
 main()
