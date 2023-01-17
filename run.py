@@ -50,19 +50,23 @@ def start_game():
         settings = input("\n ")
         if settings == "1":
             options = True
+            clear_screen()
             difficulty = "default"
             return difficulty
 
         elif settings == "2":
             options = True
+            clear_screen()
             select_game_level()
 
         elif settings == "3":
             options = True
+            clear_screen()
             game_rules()
 
         else:
             print(" Please select 1, 2 or 3 to make your choice")
+        clear_screen()
 
 
 def select_game_level():
@@ -275,13 +279,6 @@ def main():
     Runs functions used for the Game
     """
     game_intro()
-    level = start_game()
-    if level == "default":
-        num_lives = 10
-    else:
-        num_lives = select_game_level()
-        word = get_random_word()
-
-        play_game(word, num_lives)
-
+    start_game()
+   
 main()
