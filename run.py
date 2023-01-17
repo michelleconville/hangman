@@ -1,8 +1,11 @@
-import random
-import os
-import colorama
+"""
+Used for libraries and imports
+"""
+import random  # Randomly selects a word for the game
+import os  # Used to clear screen
+import colorama  # Adds color to game text
 from colorama import Fore, Style
-from lives import lives_left
+from lives import lives_left  # Hangman lives visual from lives.py
 
 colorama.init(autoreset=True)
 
@@ -165,11 +168,11 @@ def play_game(word, num_lives):
                 guesses.append(user_guess)
                 lives -= 1
             else:
-                print(f'\n{input_guess} is a part of the word, great job!')
+                print(f'\n{user_guess} is a part of the word, great job!')
                 guesses.append(user_guess)
                 guessed_words = list(word_to_guess)
                 indices = [i for i, letter in enumerate(word)
-                           if letter == input_guess]
+                           if letter == user_guess]
                 for index in indices:
                     guessed_words[index] = user_guess
                     word_to_guess = ''.join(guessed_words)
@@ -195,7 +198,7 @@ def play_game(word, num_lives):
         print('Game over.\n')
         print(f'The word we were looking for was: {word}')
 
-    restart_game(num_lives)
+    restart_game()
 
 
 def game_over():
@@ -279,6 +282,12 @@ def main():
     Runs functions used for the Game
     """
     game_intro()
-    start_game()
+    level = start_game()
+    if level == "default":
+        num_lives = 10
+    else:
+        num_lives = select_game_level()
+    word = get_random_word()
+    play_game(word, num_lives)
    
 main()
