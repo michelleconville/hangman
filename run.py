@@ -177,6 +177,21 @@ def play_game(word, num_lives):
 
     print(hangman_lives(lives))
 
+    if lives > 0:
+            print(f'\nRemaining tries: {lives}')
+            print('What country are we looking for?' 
+                  '+' '.join(word_to_guess) + ')
+            print('Your guesses: '+', '.join(guesses) + '\n')
+
+    if game_over:
+        print(f'Well done! You guessed the word: {word}')
+    else:
+        print('You have no lives left.')
+        print('Game over.\n')
+        print(f'The word we were looking for was: {word}')
+
+    restart_game(num_lives)
+
 def game_over():
     """
     Graphic for game over display
