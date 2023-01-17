@@ -125,6 +125,7 @@ def hangman_lives(lives):
     for _ in lives_left:
         return lives_left[lives]
 
+
 def play_game(word, num_lives):
     """
     Runs the game and starts all the gameplay logic.
@@ -170,18 +171,18 @@ def play_game(word, num_lives):
                     word_to_guess = ''.join(guessed_words)
                 if '﹍' not in word_to_guess:
                     game_over = True
-    
+
     except ValueError as input_error:
-         print(f'{input_error}\n Please try again.\n')
+        print(f'{input_error}\n Please try again.\n')
         continue
 
     print(hangman_lives(lives))
 
     if lives > 0:
-            print(f'\nRemaining tries: {lives}')
-            print('What country are we looking for?' 
-                  '+' '.join(word_to_guess) + ')
-            print('Your guesses: '+', '.join(guesses) + '\n')
+        print(f'\nRemaining tries: {lives}')
+        print('What country are we looking for?'
+              '+' '.join(word_to_guess) + ')
+        print('Your guesses: '+', '.join(guesses) + '\n')
 
     if game_over:
         print(f'Well done! You guessed the word: {word}')
@@ -191,6 +192,7 @@ def play_game(word, num_lives):
         print(f'The word we were looking for was: {word}')
 
     restart_game(num_lives)
+
 
 def game_over():
     """
@@ -231,6 +233,7 @@ def win_game():
          ███ ███  ██ ██   ████
         """
     )
+
 
 def main():
     """
