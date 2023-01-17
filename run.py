@@ -136,6 +136,47 @@ def play_game(word, num_lives):
     print(f'\nLives: {lives}\n')
     print('What country are you looking for? '+' '.join(word_to_guess) + '\n')
 
+    while not game_over and lives > 0:
+        user_guess = input('Please guess a letter: \n').lower()
+        try:
+            if len(user_guess) > 1:
+                raise ValueError(
+                    f"\nYou can't guess more than one letter at a time."
+                    f'You guessed: {len(user_guess)}'
+                )
+            elif not user_guess.isalpha():
+                raise ValueError(
+                    f'\nYou can only guess by letters.'
+                    f'You guessed: {user_guess}'
+                )
+            elif len(user_guess) == 1 and user_guess.isalpha():
+                if user_guess in guesses:
+                    raise ValueError(
+                        f'\n{user_guess} has already been used.'
+                    )
+            elif user_guess not in word:
+                print(f'Sorry.. {user_guess} is not a part of the word.')
+                print('Better luck next time, you lost a life..')
+                guesses.append(user_guess)
+                lives -= 1
+            else:
+                print(f'\n{input_guess} is a part of the word, great job!')
+                guesses.append(user_guess)
+                guessed_words = list(word_to_guess)
+                indices = [i for i, letter in enumerate(word)
+                           if letter == input_guess]
+                for index in indices:
+                    guessed_words[index] = user_guess
+                    word_to_guess = ''.join(guessed_words)
+                if '﹍' not in word_to_guess:
+                    game_over = True
+    
+    except ValueError as input_error:
+         print(f'{input_error}\n Please try again.\n')
+        continue
+
+    print(hangman_lives(lives))
+
 def game_over():
     """
     Graphic for game over display
