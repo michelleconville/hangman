@@ -1,3 +1,6 @@
+"""
+Displays hangman graphic to show man been hung based on lives left
+"""
 lives_left = [
         """
         ___________
