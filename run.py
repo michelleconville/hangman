@@ -17,7 +17,7 @@ def game_intro():
     '''
     title = pyfiglet.figlet_format("Lets play", font="standard", justify="center")
     title2 = pyfiglet.figlet_format("Hangman", font="standard", justify="center")
-    print(Fore.MAGENTA+Style.BRIGHT + title)
+    print(Fore.BLUE+Style.BRIGHT + title)
     print(Fore.MAGENTA+Style.BRIGHT + title2)
     print("HELLO")
     name = " "
@@ -223,8 +223,8 @@ def restart_game(num_lives):
 
     while not game_restart:
         restart = input(f"{Fore.GREEN+Style.BRIGHT}"
-                        f"Would you like yo play again"
-                        f"Please type y for Yes & n for No: ").lower()
+                        f"\nWould you like yo play again"
+                        f"\nPlease type y for Yes & n for No: ").lower()
         try:
             if restart == "y":
                 game_restart = True
