@@ -271,4 +271,6 @@ def main():
     word = get_random_word()
     play_game(word, num_lives)
 
-main()
+
+if __name__ == "__main__":
+    main()
