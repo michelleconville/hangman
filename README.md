@@ -42,9 +42,10 @@ Logic workflow
 During the planning process I thought about the basic steps needed to play a game of hangman,  I drew a workflow to help guide the coding process whilst developing the game. The flow chart is rough and it was a starting point for me, more consideration appears as I practically worked through the coding process.
 
 Areas I considered before beginning the coding:
-Where to use inputs & check inputs
-Where to give user feed back
-Where to give choices and direct of game from those choices
+
+*   Where to use inputs & check inputs
+*   Where to give user feed back
+*   Where to give choices and direct of game from those choices
 
 <details>
 <summary>logic workflow</summary>
@@ -148,11 +149,19 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 * Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
 
 
-## Technologies used
+## Libraries & Technology Used
 **Languages used**
 
+* random
+The random library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
 
-**Programs used**
+**Other**
+
+*   [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
+
+*   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/) for adding ascii art.
+
+*   Mircosoft Visio for creating the workflow
 
 
 ## Credits

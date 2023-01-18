@@ -19,7 +19,7 @@ def game_intro():
     title2 = pyfiglet.figlet_format("Hangman", font="standard", justify="center")
     print(Fore.BLUE+Style.BRIGHT + title)
     print(Fore.MAGENTA+Style.BRIGHT + title2)
-    print("HELLO")
+    print("HELLO Player")
     name = " "
     while True:
         name = input("Please enter your name: \n")
