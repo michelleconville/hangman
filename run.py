@@ -15,8 +15,12 @@ def game_intro():
     '''
     Game welcome and request users name and prints Hello name
     '''
-    title = pyfiglet.figlet_format("Lets play", font="standard", justify="center")
-    title2 = pyfiglet.figlet_format("Hangman", font="standard", justify="center")
+    title = pyfiglet.figlet_format(
+        "Lets play", font="standard", justify="center"
+        )
+    title2 = pyfiglet.figlet_format(
+        "Hangman", font="standard", justify="center"
+        )
     print(Fore.BLUE+Style.BRIGHT + title)
     print(Fore.MAGENTA+Style.BRIGHT + title2)
     print("HELLO Player")
@@ -137,7 +141,7 @@ def play_game(word, num_lives):
     """
     Runs the game and starts all the gameplay logic.
     """
-    word_to_guess = '﹍' * len(word)
+    word_to_guess = '_' * len(word)
     game_over = False
     guesses = []
     lives = num_lives
@@ -205,7 +209,8 @@ def game_end():
     """
     Graphic for game over display
     """
-    end = pyfiglet.figlet_format("Game Over", font="standard", justify="center")
+    end = pyfiglet.figlet_format('"Game Over",'
+                                 'font="standard", justify="center"')
     print(Fore.RED+Style.BRIGHT + end)
 
 
@@ -232,7 +237,6 @@ def restart_game(num_lives):
                 game_restart = True
                 hangman_game = get_random_word()
                 play_game(hangman_game, num_lives)
-              
             elif restart == "n":
                 game_restart = True
                 print("\n")
