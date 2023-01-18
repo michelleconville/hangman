@@ -201,40 +201,16 @@ def game_end():
     """
     Graphic for game over display
     """
-    print(Fore.RED+Style.BRIGHT +
-        """
-         ██████   █████  ███    ███ ███████
-        ██       ██   ██ ████  ████ ██
-        ██   ███ ███████ ██ ████ ██ █████
-        ██    ██ ██   ██ ██  ██  ██ ██
-         ██████  ██   ██ ██      ██ ███████
-
-         ██████  ██    ██ ███████ ██████
-        ██    ██ ██    ██ ██      ██   ██
-        ██    ██ ██    ██ █████   ██████
-        ██    ██  ██  ██  ██      ██   ██
-         ██████    ████   ███████ ██   ██
-        """)
+    end = pyfiglet.figlet_format("Game Over", font="standard", justify="center")
+    print(Fore.RED+Style.BRIGHT + end)
 
 
 def win_game():
     """
     Graphic for win game display
     """
-    print(Fore.GREEN+Style.BRIGHT +
-        """
-        ██    ██  ██████  ██    ██
-         ██  ██  ██    ██ ██    ██
-          ████   ██    ██ ██    ██
-           ██    ██    ██ ██    ██
-           ██     ██████   ██████
-
-        ██     ██ ██ ███    ██
-        ██     ██ ██ ████   ██
-        ██  █  ██ ██ ██ ██  ██
-        ██ ███ ██ ██ ██  ██ ██
-         ███ ███  ██ ██   ████
-        """)
+    win = pyfiglet.figlet_format("YOU WIN", font="standard", justify="center")
+    print(Fore.GREEN+Style.BRIGHT + win)
 
 
 def restart_game(num_lives):
