@@ -14,7 +14,7 @@ def game_intro():
     '''
     Game welcome and request users name and prints Hello name
     '''
-    print(
+    print(Fore.MAGENTA+Style.BRIGHT +
         """
         ██      ███████ ████████ ███████     ██████  ██       █████  ██    ██
         ██      ██         ██    ██          ██   ██ ██      ██   ██  ██  ██
@@ -29,7 +29,7 @@ def game_intro():
         ██   ██ ██   ██ ██   ████  ██████  ██      ██ ██   ██ ██   ████
         """
     )
-    print("Welcome")
+    print("HELLO")
     name = " "
     while True:
         name = input("Please enter your name: \n")
@@ -38,7 +38,7 @@ def game_intro():
             print("Error: Your name must be alphabetic only.\n")
         else:
             print("\n")
-            print(f'{Fore.YELLOW+Style.BRIGHT}Hello {name}!')
+            print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
             return name
 
 
@@ -54,6 +54,7 @@ def start_game():
     print("Press 2 to Choose the level to play at")
     print("Press 3 to Read the rules")
     options = False
+
     while not options:
         settings = input("\n ")
         if settings == "1":
@@ -70,7 +71,6 @@ def start_game():
 
         else:
             print(" Please select 1, 2 or 3 to make your choice")
-            clear_screen()
 
 
 def select_game_level():
@@ -114,14 +114,23 @@ def game_rules():
     """
     Explains to the User how to play the game
     """
-    print(f'{Fore.CYAN+Style.BRIGHT}Welcome to World Countires Hangman rules \n')
-    print("This is a guess the word game")
-    print("Guess the word by inputting letters")
-    print("If you guess the wrong letter you loose a life")
-    print("Your Hang-Hangman will then start to build")
-    print("When you reach 0 lives your will be HANGED! \n")
-    print(f'{Fore.MAGENTA+Style.BRIGHT}Good luck \n')
-    print("Press enter to return to the main menu")
+    print(
+        """
+        Welcome to World Countires Hangman rules
+
+        This is a guess the word game
+        Guess the word by inputting letters
+        If you guess the wrong letter you loose a life
+        Your Hang-Hangman will then start to build
+        When you reach 0 lives your will be HANGED!
+
+        Good luck
+        """
+    )
+    home_screen = input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
+                      "back to the main menu\n ")
+    print("\n")
+    main()
 
 
 def hangman_lives(lives):
@@ -161,7 +170,7 @@ def play_game(word, num_lives):
                 elif user_guess not in word:
                     print(f"{Fore.RED+Style.BRIGHT}"
                           f"{(user_guess)} is not in the word.")
-                    print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
+                    print(f"{Fore.RED+Style.BRIGHT} You Lose a Life!")
                     guesses.append(user_guess)
                     lives -= 1
                 else:
