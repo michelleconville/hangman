@@ -15,8 +15,10 @@ def game_intro():
     '''
     Game welcome and request users name and prints Hello name
     '''
-    title = pyfiglet.figlet_format("Lets play Hangman", font="standard", justify="center")
+    title = pyfiglet.figlet_format("Lets play", font="standard", justify="center")
+    title2 = pyfiglet.figlet_format("Hangman", font="standard", justify="center")
     print(Fore.MAGENTA+Style.BRIGHT + title)
+    print(Fore.MAGENTA+Style.BRIGHT + title2)
     print("HELLO")
     name = " "
     while True:
