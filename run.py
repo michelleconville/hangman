@@ -25,7 +25,7 @@ def game_intro():
         name = input("Please enter your name: \n")
 
         if name.isalpha() is not True:
-            print("Error: Your name must be alphabetic only.\n")
+            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must be alphabetic only.\n')
         else:
             print("\n")
             print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
@@ -39,7 +39,6 @@ def start_game():
     2 to select level of play
     3 to see the game rules
     '''
-    print("\n")
     print("Press 1 to Start playing game")
     print("Press 2 to Choose the level to play at")
     print("Press 3 to Read the rules")
@@ -105,19 +104,19 @@ def game_rules():
     """
     print(
         """
-        Welcome to World Countires Hangman rules
+    Welcome to World Countires Hangman rules
 
-        This is a guess the word game
-        Guess the word by inputting letters
-        If you guess the wrong letter you loose a life
-        Your Hangman will then start to build
-        When you reach 0 lives your will be HANGED
+    This is a guess the word game
+    Guess the word by inputting letters
+    If you guess the wrong letter you loose a life
+    Your Hangman will then start to build
+    When you reach 0 lives your will be HANGED
 
-        Good luck
-        """
+    Good luck
+    """
     )
     home_screen = input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
-                      " back to the main menu\n ")
+                        " back to the main menu\n ")
     print("\n")
     main()
     clear_screen()
@@ -228,7 +227,9 @@ def restart_game(num_lives):
         try:
             if restart == "y":
                 game_restart = True
-                start_game()
+                hangman_game = get_random_word()
+                play_game(hangman_game, num_lives)
+              
             elif restart == "n":
                 game_restart = True
                 print("\n")
