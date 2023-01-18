@@ -6,6 +6,7 @@ import os  # Used to clear screen
 import colorama  # Adds color to game text
 from colorama import Fore, Style
 from lives import lives_left  # Hangman lives visual from lives.py
+import pyfiglet
 
 colorama.init(autoreset=True)
 
@@ -14,21 +15,8 @@ def game_intro():
     '''
     Game welcome and request users name and prints Hello name
     '''
-    print(Fore.MAGENTA+Style.BRIGHT +
-        """
-        ██      ███████ ████████ ███████     ██████  ██       █████  ██    ██
-        ██      ██         ██    ██          ██   ██ ██      ██   ██  ██  ██
-        ██      █████      ██    ███████     ██████  ██      ███████   ████
-        ██      ██         ██         ██     ██      ██      ██   ██    ██
-        ███████ ███████    ██    ███████     ██      ███████ ██   ██    ██
-
-        ██   ██  █████  ███    ██  ██████  ███    ███  █████  ███    ██
-        ██   ██ ██   ██ ████   ██ ██       ████  ████ ██   ██ ████   ██
-        ███████ ███████ ██ ██  ██ ██   ███ ██ ████ ██ ███████ ██ ██  ██
-        ██   ██ ██   ██ ██  ██ ██ ██    ██ ██  ██  ██ ██   ██ ██  ██ ██
-        ██   ██ ██   ██ ██   ████  ██████  ██      ██ ██   ██ ██   ████
-        """
-    )
+    title = pyfiglet.figlet_format("Lets play Hangman", font="standard", justify="center")
+    print(Fore.MAGENTA+Style.BRIGHT + title)
     print("HELLO")
     name = " "
     while True:
@@ -54,7 +42,6 @@ def start_game():
     print("Press 2 to Choose the level to play at")
     print("Press 3 to Read the rules")
     options = False
-
     while not options:
         settings = input("\n ")
         if settings == "1":
@@ -121,16 +108,17 @@ def game_rules():
         This is a guess the word game
         Guess the word by inputting letters
         If you guess the wrong letter you loose a life
-        Your Hang-Hangman will then start to build
-        When you reach 0 lives your will be HANGED!
+        Your Hangman will then start to build
+        When you reach 0 lives your will be HANGED
 
         Good luck
         """
     )
     home_screen = input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
-                      "back to the main menu\n ")
+                      " back to the main menu\n ")
     print("\n")
     main()
+    clear_screen()
 
 
 def hangman_lives(lives):
