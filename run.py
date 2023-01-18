@@ -70,6 +70,7 @@ def start_game():
 
         else:
             print(" Please select 1, 2 or 3 to make your choice")
+            clear_screen()
 
 
 def select_game_level():
@@ -143,63 +144,59 @@ def play_game(word, num_lives):
     print('What country are you looking for? '+' '.join(word_to_guess) + '\n')
 
     while not game_over and lives > 0:
-        user_guess = input('Please guess a letter: \n').lower()
+        user_guess = input("Please guess a letter:\n ").lower()
         try:
             if len(user_guess) > 1:
-                raise ValueError(
-                    f"\nYou can't guess more than one letter at a time."
-                    f'You guessed: {len(user_guess)}'
-                )
-
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                 f"You can only guess 1 letter at a time. "
+                                 f"You guessed {len(user_guess)}")
             elif not user_guess.isalpha():
-                raise ValueError(
-                    f'\nYou can only guess by letters.'
-                    f'You guessed: {(user_guess)}'
-                )
-
+                raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                 f"You can only guess letters."
+                                 f"You guessed {user_guess},is not a letter.")
             elif len(user_guess) == 1 and user_guess.isalpha():
                 if user_guess in guesses:
-                    raise ValueError(
-                        f'\n{(user_guess)} has already been used.'
-                    )
+                    raise ValueError(f"{Fore.RED+Style.BRIGHT}"
+                                     f"You have already guessed {user_guess}.")
+                elif user_guess not in word:
+                    clear_screen()
+                    print(f"{Fore.RED+Style.BRIGHT}"
+                          f"{(user_guess)} is not in the word.")
+                    print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
+                    guesses.append(user_guess)
+                    lives -= 1
+                else:
+                    clear_screen()
+                    print(f"{Fore.GREEN+Style.BRIGHT}"
+                          f"{user_guess} is a part of the word")
 
-            elif user_guess not in word:
-                print(f'Sorry.. {user_guess} is not a part of the word.')
-                print('Better luck next time, you lost a life..')
-                guesses.append(user_guess)
-                lives -= 1
-            else:
-                print(f'\n{user_guess} is a part of the word, great job!')
-                guesses.append(user_guess)
-                guessed_words_list = list(word_to_guess)
-                indices = [i for i, letter in enumerate(word)
-                           if letter == user_guess]
-                for index in indices:
-                    guessed_words_list[index] = user_guess
-                    word_to_guess = ''.join(guessed_words_list)
-                if '﹍' not in word_to_guess:
-                    game_over = True
+                    guesses.append(user_guess)
+                    word_to_guess_list = list(word_to_guess)
+                    indices = [i for i, letter in enumerate(word)
+                               if letter == user_guess]
+                    for index in indices:
+                        word_to_guess_list[index] = user_guess
+                        word_to_guess = "".join(word_to_guess_list)
+                    if "_" not in word_to_guess:
+                        game_over = True
 
         except ValueError as input_error:
             print(f'{input_error}\n Please try again.\n')
             continue
 
-    print(hangman_lives(lives))
+        print(hangman_lives(lives))
 
-    if lives > 0:
-        print(f'\nRemaining tries: {lives}')
-        print('What country are we looking for?'
-              '+' '.join(word_to_guess) + ')
-        print('Your guesses: '+', '.join(guesses) + '\n')
+        if lives > 0:
+            print(f"Lives: {lives}\n")
+            print("The country to guess: " + " ".join(word_to_guess) + "\n")
+            print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
         print(f'Well done! You guessed the word: {word}')
         win_game()
     else:
         print('You have no lives left.')
-        print('Game over.\n')
         print(f'The word you were looking for was: {word}')
-        game_over()
 
     restart_game(num_lives)
 
@@ -223,6 +220,7 @@ def game_over():
          ██████    ████   ███████ ██   ██
         """
         )
+
 
 def win_game():
     """
