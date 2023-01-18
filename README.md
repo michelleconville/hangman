@@ -1,5 +1,26 @@
 # World countries hangman game
 
+## Table of Content
+1. [Project overview](#project-overview)
+2. [How to Play](#how-to-play)
+3. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User stories](#user-stories)
+4. [Planning](#planning)
+    1. [Logic workflow](#logic-workflow)
+    2. [Aesthetic Design](#aesthetic-design)
+5. [Features](#features)
+6. [Testing](#testing)
+    1. [Validation](#validation)
+    	1. [pep8ci](#pep8ci)
+    2. [Testing user stories](#testing-user-stories)
+    3. [Further testing](#further-testing)
+    4. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Libraries and Technologies Used](#libraries-and-technologies-used)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
+
 
 ## Project overview
 Project 3 for Code Institute Full-stack development program: Python Essentials.
@@ -38,7 +59,7 @@ Site owner
 
 
 ## Planning
-Logic workflow
+### Logic workflow
 During the planning process I thought about the basic steps needed to play a game of hangman,  I drew a workflow to help guide the coding process whilst developing the game. The flow chart is rough and it was a starting point for me, more consideration appears as I practically worked through the coding process.
 
 Areas I considered before beginning the coding:
@@ -68,8 +89,6 @@ Colorama was installed and imported to change the font colour. Colorama was adde
 
 A mix of magenta, blue were used on the introduction and rules area,  green and red was used as a visual cue to users for certain feedback.
 
-### Structure
-
 
 ## Features 
 
@@ -78,7 +97,7 @@ A mix of magenta, blue were used on the introduction and rules area,  green and 
 
 
 ### Validation
-[pep8 online](https://pep8ci.herokuapp.com/) was used for validating the python files. 
+[pep8ci](https://pep8ci.herokuapp.com/) was used for validating the python files. 
 
 <details>
 <summary>Lives page</summary>
@@ -149,19 +168,28 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 * Select the correct branch for deployment from the drop-down menu and click **Deploy Branch** for manual deployment.
 
 
-## Libraries & Technology Used
-**Languages used**
+## Libraries and Technologies Used
+**Language used**
+*   Python - The game logic was created using Python.
+
+**Built-in Python Libraries**
 
 * random
 The random library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
 
 **Other**
 
-*   [Colorama](https://pypi.org/project/colorama/) for adding colour to fonts.
+*   GitHub - Source code is hosted on GitHub.
 
-*   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/) for adding ascii art.
+*   Gitpod - Used to commit and push code during the development of the project.
 
-*   Mircosoft Visio for creating the workflow
+*   Heroku - To the deploy the code to a online terminal
+
+*   [Colorama](https://pypi.org/project/colorama/) - For adding colour to fonts.
+
+*   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/)  - For adding ascii art.
+
+*   Mircosoft Visio - For creating the workflow diagram
 
 
 ## Credits
@@ -177,3 +205,4 @@ The random library was imported to access the built-in method of generating a ra
 
 
 ##  Acknowledgements
+Special thanks to my mentor Daisy for her assistance throughout this project.
