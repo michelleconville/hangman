@@ -3,10 +3,10 @@ Used for libraries and imports
 """
 import random  # Randomly selects a word for the game
 import os  # Used to clear screen
+import pyfiglet  # import pyfiglet module for ascii art
 import colorama  # Adds color to game text
 from colorama import Fore, Style
 from lives import lives_left  # Hangman lives visual from lives.py
-import pyfiglet
 
 colorama.init(autoreset=True)
 
@@ -25,7 +25,8 @@ def game_intro():
         name = input("Please enter your name: \n")
 
         if name.isalpha() is not True:
-            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must be alphabetic only.\n')
+            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
+                  'be alphabetic only.\n')
         else:
             print("\n")
             print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
@@ -104,19 +105,21 @@ def game_rules():
     """
     print(
         """
-    Welcome to World Countires Hangman rules
-
+    Welcome to countries of the world hangman game
     This is a guess the word game
+
+    THE RULES
+
     Guess the word by inputting letters
-    If you guess the wrong letter you loose a life
-    Your Hangman will then start to build
+    If you guess the wrong letter, you lose a life
+    Your hangman will then start to build
     When you reach 0 lives your will be HANGED
 
     Good luck
     """
     )
     input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
-                        " back to the main menu\n ")
+          " back to the main menu\n ")
     print("\n")
     main()
     clear_screen()
@@ -185,7 +188,7 @@ def play_game(word, num_lives):
         if lives > 0:
             print(f"Lives: {lives}\n")
             print("The country to guess: " + " ".join(word_to_guess) + "\n")
-            print("Letters guessed: " + ", ".join(guesses) + "\n")
+            print(" Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
         print(f'Well done! You guessed the word: {word}')
