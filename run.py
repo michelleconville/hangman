@@ -159,14 +159,12 @@ def play_game(word, num_lives):
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                      f"You have already guessed {user_guess}.")
                 elif user_guess not in word:
-                    clear_screen()
                     print(f"{Fore.RED+Style.BRIGHT}"
                           f"{(user_guess)} is not in the word.")
                     print(f"{Fore.RED+Style.BRIGHT}Sorry You Lose a Life!")
                     guesses.append(user_guess)
                     lives -= 1
                 else:
-                    clear_screen()
                     print(f"{Fore.GREEN+Style.BRIGHT}"
                           f"{user_guess} is a part of the word")
 
@@ -189,7 +187,7 @@ def play_game(word, num_lives):
         if lives > 0:
             print(f"Lives: {lives}\n")
             print("The country to guess: " + " ".join(word_to_guess) + "\n")
-            print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
+            print("Letters guessed: " + ", ".join(guesses) + "\n")
 
     if game_over:
         print(f'Well done! You guessed the word: {word}')
@@ -197,11 +195,12 @@ def play_game(word, num_lives):
     else:
         print('You have no lives left.')
         print(f'The word you were looking for was: {word}')
+        game_end()
 
     restart_game(num_lives)
 
 
-def game_over():
+def game_end():
     """
     Graphic for game over display
     """
@@ -218,8 +217,7 @@ def game_over():
         ██    ██ ██    ██ █████   ██████
         ██    ██  ██  ██  ██      ██   ██
          ██████    ████   ███████ ██   ██
-        """
-        )
+        """)
 
 
 def win_game():
@@ -239,8 +237,7 @@ def win_game():
         ██  █  ██ ██ ██ ██  ██
         ██ ███ ██ ██ ██  ██ ██
          ███ ███  ██ ██   ████
-        """
-    )
+        """)
 
 
 def restart_game(num_lives):
