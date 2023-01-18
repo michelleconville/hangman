@@ -52,6 +52,20 @@ Where to give choices and direct of game from those choices
 ![lives.py](assets/images/logic-workflow.jpg)
 </details>
 
+### Aesthetic Design
+*   Font
+
+Pyfiglet was installed and import pyfiglet was used to generate ASCII art for the game. Pyfiglet was added to requirements.txt then for deployment to Heroku.
+
+The ASCII art was chosen for readability for the user from [Figlet](http://www.figlet.org/)
+
+Standard Font - for clarity and line spacing. Used on Title & Winner and Game Over Message
+
+*   Colour
+
+Colorama was installed and imported to change the font colour. Colorama was added to requirements.txt then for deployment.
+
+A mix of magenta, blue were used on the introduction and rules area,  green and red was used as a visual cue to users for certain feedback.
 
 ### Structure
 

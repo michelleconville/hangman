@@ -115,7 +115,7 @@ def game_rules():
     Good luck
     """
     )
-    home_screen = input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
+    input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
                         " back to the main menu\n ")
     print("\n")
     main()
