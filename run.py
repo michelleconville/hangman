@@ -45,7 +45,7 @@ def start_game():
     3 to see the game rules
     '''
     print("Press 1 to Start playing game")
-    print("Press 2 to Choose the level to play at")
+    print("Press 2 to Choose a difficulty level")
     print("Press 3 to Read the rules")
     options = False
     while not options:
@@ -71,8 +71,8 @@ def select_game_level():
     Function to select level
     """
     print("Please select a level\n")
-    print("Press e for Easy")
-    print("Press n for Normal")
+    print("Press E for Easy - 10 lives")
+    print("Press H for Hard - 5 lives")
     print("Press h for Hard")
     difficulty = False
     while not difficulty:

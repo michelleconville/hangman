@@ -96,6 +96,27 @@ A mix of magenta, blue were used on the introduction and rules area,  green and 
 
 
 ## Features 
+### Game introduction screen
+
+The user is presented with a simple welcome screen when they open the application that tells them what the game is. It has four different compoments:
+1. Game title
+2. Welcome note
+3. User name request and 
+4. Input Space for the users name.
+
+![game intro screen](assets/images/game-intro-screen.JPG)
+
+*   The user is asked to enter their name before they can play the game. 
+*   The game is designed to require an input of letters at this point, if the user enters anything other than letters they will get an error message. 
+
+![name input error](assets/images/name-input-error.JPG)
+
+*   Once the user enters their name correctly, they will be welcomed and presented with a game menu:
+*       They can select to play the game
+*       They can set a difficulty level
+*       They can read the rules of the game
+
+![game menu](assets/images//game-menu.JPG)
 
 
 ## Testing
