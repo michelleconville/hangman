@@ -118,6 +118,10 @@ Once the user enters their name correctly, they will be welcomed and presented w
 
 ![game menu](assets/images/game-menu.JPG)
 
+The game is designed to require an input of number at this point, if the user enters anything other than 1, 2 or 3 they will get an error message.
+
+![game menu error](assets/images/game-menu-error.jpg)
+
 ### Press 2: Set difficulty
 If the user presses 2 they will be asked to select a level to play at:
 *   Press E for Easy = 10 lives

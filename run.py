@@ -63,7 +63,8 @@ def start_game():
             game_rules()
 
         else:
-            print(" Please select 1, 2 or 3 to make your choice")
+            print(f'{Fore.RED+Style.BRIGHT}Please select 1,'
+                  ' 2 or 3 to make your choice.\n')
 
 
 def select_game_level():
