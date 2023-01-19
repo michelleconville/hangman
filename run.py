@@ -125,8 +125,7 @@ def game_rules():
     input(Fore.BLUE+Style.BRIGHT + " Press press enter to go"
           " back to the main menu\n ")
     print("\n")
-    main()
-    clear_screen()
+    start_game()
 
 
 def hangman_lives(lives):
