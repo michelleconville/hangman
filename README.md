@@ -25,7 +25,8 @@
 ## Project overview
 Project 3 for Code Institute Full-stack development program: Python Essentials.
 
-![The live site displaying on all devices](assets/images/hangman-mockup.JPG)
+![Introduction video to hangman](assets/video/hangman-intro.gif)
+
 
 View the [Live site](https://world-countries-hangman.herokuapp.com/)
 
