@@ -30,7 +30,7 @@ def game_intro():
 
         if name.isalpha() is not True:
             print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
-                  'be alphabetic only.\n')
+                  'only contain letters.\n')
         else:
             print("\n")
             print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
@@ -71,9 +71,9 @@ def select_game_level():
     Function to select level
     """
     print("Please select a level\n")
-    print("Press E for Easy - 10 lives")
-    print("Press H for Hard - 5 lives")
-    print("Press h for Hard")
+    print("Press e for Easy - 10 lives")
+    print("Press n for Normal - 7 lives")
+    print("Press h for Hard - 5 lives")
     difficulty = False
     while not difficulty:
         options = input("\n ").lower()

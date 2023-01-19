@@ -111,13 +111,26 @@ The user is presented with a simple welcome screen when they open the applicatio
 
 ![name input error](assets/images/name-input-error.JPG)
 
-*   Once the user enters their name correctly, they will be welcomed and presented with a game menu:
-*       They can select to play the game
-*       They can set a difficulty level
-*       They can read the rules of the game
+Once the user enters their name correctly, they will be welcomed and presented with a game menu:
+*   They can select to play the game
+*   They can set a difficulty level
+*   They can read the rules of the game
 
-![game menu](assets/images//game-menu.JPG)
+![game menu](assets/images/game-menu.JPG)
 
+### Press 2: Set difficulty
+If the user presses 2 they will be asked to select a level to play at:
+*   Press E for Easy = 10 lives
+*   Press N for Normal = 7 lives
+*   Press H for Hard = 5 lives
+
+### Press 3 - Rules of the game
+
+*   If the user presses 3 they will be shown the rules of the game.
+*   The rules are laid out in simple plain English
+*   The user is then asked to press enter to return to the main menu. This instruction is in a different colour to make it stand out to the user. 
+
+![The rules](assets/images/rules-screen.JPG)
 
 ## Testing
 
