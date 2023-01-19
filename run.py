@@ -30,7 +30,7 @@ def game_intro():
 
         if name.isalpha() is not True:
             print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
-                  'only contain letters.\n')
+                  ' only contain letters.\n')
         else:
             print("\n")
             print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
@@ -92,7 +92,9 @@ def select_game_level():
             num_lives = 5
             return num_lives
         else:
-            print("\n Please choose E, N or H to select your level")
+            print("\n")
+            print(f'{Fore.RED+Style.BRIGHT}Please choose E, N'
+                  ' or H to select your level.\n')
 
 
 def get_random_word():

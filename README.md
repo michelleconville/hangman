@@ -124,6 +124,13 @@ If the user presses 2 they will be asked to select a level to play at:
 *   Press N for Normal = 7 lives
 *   Press H for Hard = 5 lives
 
+![difficulty level menu](assets/images/difficulty-level-screen.JPG)
+
+*   Once the user makes a selection, they will be brought straight to the game at that level.
+*   The number of lives will display, and the user will be asked to guess a letter
+
+![game play screen from level screen](assets/images/game-play-screen-from-level-screen.JPG)
+
 ### Press 3 - Rules of the game
 
 *   If the user presses 3 they will be shown the rules of the game.
