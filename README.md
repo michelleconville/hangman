@@ -118,17 +118,28 @@ Once the user enters their name correctly, they will be welcomed and presented w
 
 ![game menu](assets/images/game-menu.JPG)
 
-The game is designed to require an input of number at this point, if the user enters anything other than 1, 2 or 3 they will get an error message.
+The game is designed to require an input of numbers at this point, if the user enters anything other than 1, 2 or 3 they will get an error message.
 
-![game menu error](assets/images/game-menu-error.jpg)
+INSERT ERROR
+
+### Press 1: Start playing
+If the user presses 1 the game will start, the difficulty level will default to the easy level.
+
+Find out more in the [Input of guess by player](#input-of-guess-by-player) section
+
+![default game start](assets/images/default-game-start.JPG)
 
 ### Press 2: Set difficulty
 If the user presses 2 they will be asked to select a level to play at:
-*   Press E for Easy = 10 lives
-*   Press N for Normal = 7 lives
-*   Press H for Hard = 5 lives
+*   Press e for Easy = 10 lives
+*   Press n for Normal = 7 lives
+*   Press h for Hard = 5 lives
 
 ![difficulty level menu](assets/images/difficulty-level-screen.JPG)
+
+*   The game is designed to require an input of letters at this point, if the user enters anything other than e, n or h they will get an error message.
+
+INSERT IMAGES
 
 *   Once the user makes a selection, they will be brought straight to the game at that level.
 *   The number of lives will display, and the user will be asked to guess a letter
@@ -142,6 +153,33 @@ If the user presses 2 they will be asked to select a level to play at:
 *   The user is then asked to press enter to return to the main menu. This instruction is in a different colour to make it stand out to the user. 
 
 ![The rules](assets/images/rules-screen.JPG)
+
+### Input of guess by player
+
+*   A function generates a country name from a list and the letters in the country name are denoted by a series of dashes.
+*   The user has a number of lives based on the difficulty level they chose and as they make incorrect guesses a hangman is displayed as a graphical *  representation of the lives they have lost. 
+
+![game starts screen](assets/images/game-starts-screen.JPG)
+
+*   As the user guesses letters, a record of all letters guessed with the shown. This will help the user ensure they do not guess the same letter again. 
+
+When a user selects a letter that is in the word, a message in green text will appear and if the user selects a letter that is not included in the word, a message in red text will appear
+
+![found a letter message](assets/images/letter-in-the-word.JPG)
+
+![letter not in word message](assets/images/lose-a-life.JPG)
+
+For all user inputs, the game runs a validation check to ensure the input is valid. 
+
+*   Where the user guesses a letter which they have already guessed they will receive a message to tell them. 
+
+![game starts screen](assets/images/already-selected-letter.JPG)
+
+*   Where the user guesses a number or special character they will receive a message to tell them. 
+
+![game starts screen](assets/images/number-entered.JPG)
+
+
 
 ## Testing
 

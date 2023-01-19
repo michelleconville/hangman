@@ -94,8 +94,8 @@ def select_game_level():
             return num_lives
         else:
             print("\n")
-            print(f'{Fore.RED+Style.BRIGHT}Please choose E, N'
-                  ' or H to select your level.\n')
+            print(f'{Fore.RED+Style.BRIGHT}Please choose e, n'
+                  ' or h to select your level.\n')
 
 
 def get_random_word():
