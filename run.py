@@ -208,8 +208,9 @@ def game_end():
     """
     Graphic for game over display
     """
-    end = pyfiglet.figlet_format('"Game Over",'
-                                 'font="standard", justify="center"')
+    end = pyfiglet.figlet_format(
+        "Game Over", font="standard", justify="center"
+        )
     print(Fore.RED+Style.BRIGHT + end)
 
 
