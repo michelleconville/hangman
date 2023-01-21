@@ -180,9 +180,7 @@ For all user inputs, the game runs a validation check to ensure the input is val
 ![game starts screen](assets/images/number-entered.JPG)
 
 
-
 ## Testing
-
 
 ### Validation
 [pep8ci](https://pep8ci.herokuapp.com/) was used for validating the python files. All python files were checked with no errors reported.
@@ -196,9 +194,7 @@ For all user inputs, the game runs a validation check to ensure the input is val
 
 ### Testing
 
-Methods such as print() as the code developed was used to check for errors. This helped check everything was behaving as expected and functions such as generating the random numbers for the secret code were being generated correctly.
-
-User inputs were printed back to the console to check all functions and methods were correctly applied to the input.
+Methods such as print() as the code was created was used to check for errors. This helped check everything was behaving as expected and functions such as generating the random word for the word being generated for the game correctly.
 
 **Manual test cases**
 
@@ -245,10 +241,12 @@ List of manual test cases excuted following the code being deplayed to Heroku. A
 | Play N Input       | Returns to Main Menu          | N & Enter    | Works as expected |
 
 **Further testing**
-Asked friends and family to look at the site on their devices and report any issues they came found.
+
+I asked friends and family to look at the site on their devices and report any issues they came found.
 
 ### Bugs
 **Bugs encountered**
+
 Being new to python, I did have many syntax errors, indent errors, white space errors and my lines of code were to long, these were all fixed as I was coding.
 
 Some examples of other bugs
@@ -324,7 +322,12 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 **Built-in Python Libraries**
 
 * random
+
 The random library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
+
+*   os
+
+The os library was imported to create a function to utilise the os.system to clear the terminal. This supports a positive user experience on game replay by clearing the previous gameplay and making the screen clearer and more structured.
 
 **Other**
 
@@ -340,17 +343,23 @@ The random library was imported to access the built-in method of generating a ra
 
 *   Mircosoft Visio - For creating the workflow diagram
 
+*   Movavi video editor - To create a video of the application working
+
+*   [ezgif](http://ezgif.com/) - To create a gif
+
 
 ## Credits
 
-
-### Media
-
-
 ### Code
-
+*   [Youtube video tutorial](https://www.youtube.com/watch?v=5x6iAKdJB6U)
+*   [StackOverflow](https://stackoverflow.com)
+*   [101 computing](https://www.101computing.net/python-typing-text-effect/) for the clear screen code
+*   [main fucntion](https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes) to execute code when the file runs as a script
 
 ### Other resources used
+*   [gibbo101](https://github.com/gibbo101/hangman/blob/main/README.md)
+*   [Krnsand](https://github.com/Krnsand/pp3-hangman)
+*   [TaraHelberg](https://github.com/TaraHelberg/Hang-Hangman)
 
 
 ##  Acknowledgements
