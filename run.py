@@ -112,6 +112,7 @@ def select_game_level():
 def get_random_word():
     """
     Picks a random word from words.txt
+    https://stackoverflow.com/questions/491921/unicode-utf-8-reading-and-writing-to-files-in-python
     """
     random_word = random.choice(
         open("words.txt", "r", encoding="utf8").read().split('\n')
@@ -121,7 +122,7 @@ def get_random_word():
 
 def game_rules():
     """
-    Explains to the User how to play the game
+    Explains to the user how to play the game
     """
     print(
         """
@@ -225,6 +226,7 @@ def play_game(word, num_lives):
 def game_end():
     """
     Graphic for game over display
+    Game graphic text from http://www.figlet.org/
     """
     end = pyfiglet.figlet_format(
         "Game Over", font="standard", justify="center"
@@ -235,6 +237,7 @@ def game_end():
 def win_game():
     """
     Graphic for win game display
+    Game graphic text from http://www.figlet.org/
     """
     win = pyfiglet.figlet_format("YOU WIN", font="standard", justify="center")
     print(Fore.GREEN+Style.BRIGHT + win)
@@ -271,14 +274,15 @@ def restart_game(num_lives):
 
 def clear_screen():
     """
-    Used to clear Terminal screen
+    Used to clear terminal screen
+    https://www.101computing.net/python-typing-text-effect/
     """
     os.system("clear")
 
 
 def main():
     """
-    Runs functions used for the Game
+    Runs functions used for the game
     """
     game_intro()
     difficulty = start_game()
