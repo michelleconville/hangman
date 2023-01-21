@@ -202,7 +202,7 @@ User inputs were printed back to the console to check all functions and methods 
 
 **Manual test cases**
 
-List of manual test cases excuted following the code being deplayed to Heroku
+List of manual test cases excuted following the code being deplayed to Heroku. All [User stories](#user-stories) are covered in this list of manual tests.
 
 | Feature            | Expected result               | Action       | Actual Result     |
 |--------------------|-------------------------------|--------------|-------------------|
@@ -244,8 +244,22 @@ List of manual test cases excuted following the code being deplayed to Heroku
 | Play Y Input       | Returns to Main Menu          | Y & Enter    | Works as expected |
 | Play N Input       | Returns to Main Menu          | N & Enter    | Works as expected |
 
-### Bugs
+**Further testing**
+Asked friends and family to look at the site on their devices and report any issues they came found.
 
+### Bugs
+**Bugs encountered**
+Being new to python, I did have many syntax errors, indent errors, white space errors and my lines of code were to long, these were all fixed as I was coding.
+
+Some examples of other bugs
+
+| Bug                                                                                                        | Fix                                                                                                                                                            |
+|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Encoding error   in the get random word function                                                           | After reading   https://stackoverflow.com/questions/491921/unicode-utf-8-reading-and-writing-to-files-in-python,   I updated the function with encoding="utf8" |
+| When a   letter that was in the word was selected, the game finished even if all words   were not selected | Found a error in the code, I   used two different underscore symbols without realising                                                                         |
+
+#### Unfixed Bugs
+No unfixed bugs at this time
 
 ## Deployment
 The site was deployed via [Heroku]( https://id.heroku.com/login), and the live link can be found here: [Hangman – World Countries](https://world-countries-hangman.herokuapp.com/) 
