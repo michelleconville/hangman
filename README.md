@@ -73,11 +73,7 @@ Areas I considered before beginning the coding:
 *   Where to give user feed back
 *   Where to give choices and direct of game from those choices
 
-<details>
-<summary>logic workflow</summary>
-
 ![lives.py](assets/images/logic-workflow.jpg)
-</details>
 
 ### Aesthetic Design
 *   Font
@@ -178,6 +174,37 @@ For all user inputs, the game runs a validation check to ensure the input is val
 *   Where the user guesses a number or special character they will receive a message to tell them. 
 
 ![game starts screen](assets/images/number-entered.JPG)
+
+### Win game
+*   When the user correctly guesses the name of the country within their number of lives, they will be presented with a message saying they won
+*   The user will be asked if they want to play again
+
+![win message](assets/images/win-message.JPG)
+
+### Game Over
+*   When the user is unable to guess the name of the country within their number of lives, they will be presented with a message saying game over and identifing the word the user was trying to guess.
+*   The user will be asked if they want to play again
+
+![game over message](assets/images/game-over-message.JPG)
+
+
+### Play again Y/N Choice
+
+*   When the user finishes a game, they will be asked if they wish to play again.
+*   If they select Y for Yes, they will be presented with a new game at the level they previously played.
+
+![play again - yes](assets/images/play-again-yes-screen.JPG)
+
+*   If they select N for No, they will be presented with the welcome screen
+
+![play again - No](assets/images/play-again-no-screen.JPG)
+
+
+### Future features to be implemented
+
+*   It would be nice to include a scoreboard so that user can compare their score. This could increase the challenge for users to try and beat their previous scores.
+
+*   The ability to guess the entire word and once word was guessed return option of playagain Y/N
 
 
 ## Testing
