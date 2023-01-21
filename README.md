@@ -185,17 +185,64 @@ For all user inputs, the game runs a validation check to ensure the input is val
 
 
 ### Validation
-[pep8ci](https://pep8ci.herokuapp.com/) was used for validating the python files. 
+[pep8ci](https://pep8ci.herokuapp.com/) was used for validating the python files. All python files were checked with no errors reported.
 
-<details>
-<summary>Lives page</summary>
+**run.py file**
+![run.py](assets/images/pep8-run.JPG)
 
+**lives.py file**
 ![lives.py](assets/images/pep8-lives.JPG)
-</details>
 
 
-### Testing user stories
+### Testing
 
+Methods such as print() as the code developed was used to check for errors. This helped check everything was behaving as expected and functions such as generating the random numbers for the secret code were being generated correctly.
+
+User inputs were printed back to the console to check all functions and methods were correctly applied to the input.
+
+**Manual test cases**
+
+List of manual test cases excuted following the code being deplayed to Heroku
+
+| Feature            | Expected result               | Action       | Actual Result     |
+|--------------------|-------------------------------|--------------|-------------------|
+| Game title         | Display On Open               | N/A          | Works as expected |
+| Hello message      | Display On Open               | N/A          | Works as expected |
+| Name Request       | Display On Open               | N/A          | Works as expected |
+| User Input Name    | User to Input Name            | Enter        | Works as expected |
+| User Input number  | Not a letter or _ Message     | Enter        | Works as expected |
+| Hello {NAME}       | Displays On Enter             | N/A          | Works as expected |
+| Show Game Menu     | of User Name & Enter          | N/A          | Works as expected |
+| Option 1           | Game to start                 | 1 & Enter    | Works as expected |
+| Game Starts        | Lives Displayed               | N/A          | Works as expected |
+| Game Starts        | Hidden Word Displayed         | N/A          | Works as expected |
+| Game Starts        | Gues a Letter & Input         | N/A          | Works as expected |
+| Option 2           | Level Menu Displayed          | 2 & Enter    | Works as expected |
+| Level Menu e       | Game To Start                 | e & Enter    | Works as expected |
+| Game Starts        | Lives Displayed               | N/A          | Works as expected |
+| Game Starts        | Hidden Word Displayed         | N/A          | Works as expected |
+| Game Starts        | Guess a Letter & Input        | N/A          | Works as expected |
+| Level Menu m       | Game To Start                 | m & Enter    | Works as expected |
+| Game Starts        | Lives Displayed               | N/A          | Works as expected |
+| Game Starts        | Hidden Word Displayed         | N/A          | Works as expected |
+| Game Starts        | Guess a Letter & Input        | N/A          | Works as expected |
+| Level Menu h       | Game To Start                 | h & Enter    | Works as expected |
+| Game Starts        | Lives Displayed               | N/A          | Works as expected |
+| Game Starts        | Hidden Word Displayed         | N/A          | Works as expected |
+| Game Starts        | Guess a Letter & Input        | N/A          | Works as expected |
+| Option 3           | Game Rules Displayed          | 3 & Enter    | Works as expected |
+| Game Rules         | Return to game menu           | Enter        | Works as expected |
+| Guess a letter     | Input a letter of Choice      | Enter letter | Works as expected |
+| During Game Play   | Hangman Visual to Build       | N/A          | Works as expected |
+| During Game Play   | Letter Not in Word Message    | N/A          | Works as expected |
+| During Game Play   | Letter In Word Message        | N/A          | Works as expected |
+| During Game Play   | Not a letter or _ Message     | N/A          | Works as expected |
+| During Game Play   | More than 1 letter Message    | N/A          | Works as expected |
+| Game Play Won      | You Won & Play Again Message  | N/A          | Works as expected |
+| Game Play Lost     | You Lost & Play Again Message | N/A          | Works as expected |
+| Play Again Message | Option to Select Y or No      | Y / N        | Works as expected |
+| Play Y Input       | Returns to Main Menu          | Y & Enter    | Works as expected |
+| Play N Input       | Returns to Main Menu          | N & Enter    | Works as expected |
 
 ### Bugs
 
