@@ -13,6 +13,7 @@ colorama.init(autoreset=True)
 
 def game_intro():
     '''
+    Game graphic text from http://www.figlet.org/
     Game welcome and request users name and prints Hello name
     '''
     title = pyfiglet.figlet_format(
@@ -73,7 +74,10 @@ def start_game():
 
 def select_game_level():
     """
-    Function to select level
+    Select difficulty level of the game:
+    e for Easy - 10 lives
+    n for Normal - 7 lives
+    h for Hard - 5 lives
     """
     print("Please select a level\n")
     print("Press e for Easy - 10 lives")
@@ -109,7 +113,9 @@ def get_random_word():
     """
     Picks a random word from words.txt
     """
-    random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    random_word = random.choice(
+        open("words.txt", "r", encoding="utf8").read().split('\n')
+        )
     return random_word.lower()
 
 
