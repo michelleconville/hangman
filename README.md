@@ -100,19 +100,19 @@ The user is presented with a simple welcome screen when they open the applicatio
 3. User name request and 
 4. Input Space for the users name.
 
-![game intro screen](assets/images/game-intro-screen.JPG)
+![game intro screen](assets/images/game-intro-screen.jpg)
 
 *   The user is asked to enter their name before they can play the game. 
 *   The game is designed to require an input of letters at this point, if the user enters anything other than letters they will get an error message. 
 
-![name input error](assets/images/name-input-error.JPG)
+![name input error](assets/images/name-input-error.jpg)
 
 Once the user enters their name correctly, they will be welcomed and presented with a game menu:
 *   They can select to play the game
 *   They can set a difficulty level
 *   They can read the rules of the game
 
-![game menu](assets/images/game-menu.JPG)
+![game menu](assets/images/game-menu.jpg)
 
 The game is designed to require an input of numbers at this point, if the user enters anything other than 1, 2 or 3 they will get an error message.
 
@@ -123,7 +123,7 @@ If the user presses 1 the game will start, the difficulty level will default to 
 
 Find out more in the [Input of guess by player](#input-of-guess-by-player) section
 
-![default game start](assets/images/default-game-start.JPG)
+![default game start](assets/images/default-game-start.jpg)
 
 ### Press 2: Set difficulty
 If the user presses 2 they will be asked to select a level to play at:
@@ -131,7 +131,7 @@ If the user presses 2 they will be asked to select a level to play at:
 *   Press n for Normal = 7 lives
 *   Press h for Hard = 5 lives
 
-![difficulty level menu](assets/images/difficulty-level-screen.JPG)
+![difficulty level menu](assets/images/difficulty-level-screen.jpg)
 
 *   The game is designed to require an input of letters at this point, if the user enters anything other than e, n or h they will get an error message.
 
@@ -140,7 +140,7 @@ INSERT IMAGES
 *   Once the user makes a selection, they will be brought straight to the game at that level.
 *   The number of lives will display, and the user will be asked to guess a letter
 
-![game play screen from level screen](assets/images/game-play-screen-from-level-screen.JPG)
+![game play screen from level screen](assets/images/game-play-screen-from-level-screen.jpg)
 
 ### Press 3 - Rules of the game
 
@@ -148,44 +148,44 @@ INSERT IMAGES
 *   The rules are laid out in simple plain English
 *   The user is then asked to press enter to return to the main menu. This instruction is in a different colour to make it stand out to the user. 
 
-![The rules](assets/images/rules-screen.JPG)
+![The rules](assets/images/rules-screen.jpg)
 
 ### Input of guess by player
 
 *   A function generates a country name from a list and the letters in the country name are denoted by a series of dashes.
 *   The user has a number of lives based on the difficulty level they chose and as they make incorrect guesses a hangman is displayed as a graphical *  representation of the lives they have lost. 
 
-![game starts screen](assets/images/game-starts-screen.JPG)
+![game starts screen](assets/images/game-starts-screen.jpg)
 
 *   As the user guesses letters, a record of all letters guessed with the shown. This will help the user ensure they do not guess the same letter again. 
 
 When a user selects a letter that is in the word, a message in green text will appear and if the user selects a letter that is not included in the word, a message in red text will appear
 
-![found a letter message](assets/images/letter-in-the-word.JPG)
+![found a letter message](assets/images/letter-in-the-word.jpg)
 
-![letter not in word message](assets/images/lose-a-life.JPG)
+![letter not in word message](assets/images/lose-a-life.jpg)
 
 For all user inputs, the game runs a validation check to ensure the input is valid. 
 
 *   Where the user guesses a letter which they have already guessed they will receive a message to tell them. 
 
-![game starts screen](assets/images/already-selected-letter.JPG)
+![game starts screen](assets/images/already-selected-letter.jpg)
 
 *   Where the user guesses a number or special character they will receive a message to tell them. 
 
-![game starts screen](assets/images/number-entered.JPG)
+![game starts screen](assets/images/number-entered.jpg)
 
 ### Win game
 *   When the user correctly guesses the name of the country within their number of lives, they will be presented with a message saying they won
 *   The user will be asked if they want to play again
 
-![win message](assets/images/win-message.JPG)
+![win message](assets/images/win-message.jpg)
 
 ### Game Over
 *   When the user is unable to guess the name of the country within their number of lives, they will be presented with a message saying game over and identifing the word the user was trying to guess.
 *   The user will be asked if they want to play again
 
-![game over message](assets/images/game-over-message.JPG)
+![game over message](assets/images/game-over-message.jpg)
 
 
 ### Play again Y/N Choice
@@ -193,11 +193,11 @@ For all user inputs, the game runs a validation check to ensure the input is val
 *   When the user finishes a game, they will be asked if they wish to play again.
 *   If they select Y for Yes, they will be presented with a new game at the level they previously played.
 
-![play again - yes](assets/images/play-again-yes-screen.JPG)
+![play again - yes](assets/images/play-again-yes-screen.jpg)
 
 *   If they select N for No, they will be presented with the welcome screen
 
-![play again - No](assets/images/play-again-no-screen.JPG)
+![play again - No](assets/images/play-again-no-screen.jpg)
 
 
 ### Future features to be implemented
@@ -213,10 +213,10 @@ For all user inputs, the game runs a validation check to ensure the input is val
 [pep8ci](https://pep8ci.herokuapp.com/) was used for validating the python files. All python files were checked with no errors reported.
 
 **run.py file**
-![run.py](assets/images/pep8-run.JPG)
+![run.py](assets/images/pep8-run.jpg)
 
 **lives.py file**
-![lives.py](assets/images/pep8-lives.JPG)
+![lives.py](assets/images/pep8-lives.jpg)
 
 
 ### Testing
