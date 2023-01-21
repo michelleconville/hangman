@@ -52,19 +52,23 @@ def start_game():
         settings = input("\n ")
         if settings == "1":
             options = True
+            clear_screen()
             difficulty = "default"
             return difficulty
 
         elif settings == "2":
             options = True
+            clear_screen()
 
         elif settings == "3":
             options = True
+            clear_screen()
             game_rules()
 
         else:
             print(f'{Fore.RED+Style.BRIGHT}Please select 1,'
                   ' 2 or 3 to make your choice.\n')
+        clear_screen()
 
 
 def select_game_level():
@@ -80,16 +84,19 @@ def select_game_level():
         options = input("\n ").lower()
         if options == "e":
             difficulty = True
+            clear_screen()
             num_lives = 10
             return num_lives
 
         elif options == "n":
             difficulty = True
+            clear_screen()
             num_lives = 7
             return num_lives
 
         elif options == "h":
             difficulty = True
+            clear_screen()
             num_lives = 5
             return num_lives
         else:
@@ -166,12 +173,14 @@ def play_game(word, num_lives):
                     raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                      f"You have already guessed {user_guess}.")
                 elif user_guess not in word:
+                    clear_screen()
                     print(f"{Fore.RED+Style.BRIGHT}"
                           f"{(user_guess)} is not in the word.")
                     print(f"{Fore.RED+Style.BRIGHT} You Lose a Life!")
                     guesses.append(user_guess)
                     lives -= 1
                 else:
+                    clear_screen()
                     print(f"{Fore.GREEN+Style.BRIGHT}"
                           f"{user_guess} is a part of the word")
 
