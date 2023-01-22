@@ -12,10 +12,8 @@
 5. [Features](#features)
 6. [Testing](#testing)
     1. [Validation](#validation)
-    	1. [pep8ci](#pep8ci)
-    2. [Testing user stories](#testing-user-stories)
-    3. [Further testing](#further-testing)
-    4. [Bugs](#bugs)
+    2. [Test cases](#test-cases)
+    3. [Bugs](#bugs)
 7. [Deployment](#deployment)
 8. [Libraries and Technologies Used](#libraries-and-technologies-used)
 9. [Credits](#credits)
@@ -38,7 +36,7 @@ Hangman is an age-old guessing game, traditionally played as a paper and pencil 
 In this Hangman game players aim to guess the hidden name of a country. The country is represented by a series of dashes, each representing one letter in the country name. 
 
 The player inputs a letter into the terminal:
-* If the letter appears in the country name the corresponding dash will be replaced with the letter.
+* If the letter appears in the country name, the corresponding dash will be replaced with the letter.
 * If the letter does not appear they will lose a life. 
 
 Players continue to enter letters until they correctly guess the country name or until they have exhausted all their lives.
@@ -88,22 +86,22 @@ Standard Font - for clarity and line spacing. Used on Title & Winner and Game Ov
 
 Colorama was installed and imported to change the font colour. Colorama was added to requirements.txt then for deployment.
 
-A mix of magenta, blue were used on the introduction and rules area,  green and red was used as a visual cue to users for certain feedback.
+A mix of magenta and blue were used on the introduction and rules area,  green and red was used as a visual cue to users for certain feedback.
 
 
 ## Features 
 ### Game introduction screen
 
-The user is presented with a simple welcome screen when they open the application that tells them what the game is. It has four different compoments:
+The user is presented with a simple welcome screen when they open the application that tells them what the game is. It has four different components:
 1. Game title
 2. Welcome note
-3. User name request and 
+3. The users name request and 
 4. Input Space for the users name.
 
 ![game intro screen](assets/images/game-intro-screen.jpg)
 
 *   The user is asked to enter their name before they can play the game. 
-*   The game is designed to require an input of letters at this point, if the user enters anything other than letters they will get an error message. 
+*   The game is designed to require an input of letters at this point, if the user enters anything other than letters, they will get an error message. 
 
 ![name input error](assets/images/name-input-error.jpg)
 
@@ -153,11 +151,11 @@ If the user presses 2 they will be asked to select a level to play at:
 ### Input of guess by player
 
 *   A function generates a country name from a list and the letters in the country name are denoted by a series of dashes.
-*   The user has a number of lives based on the difficulty level they chose and as they make incorrect guesses a hangman is displayed as a graphical *  representation of the lives they have lost. 
+*   The user has a number of lives based on the difficulty level they chose and as they make incorrect guesses a hangman is displayed as a graphical representation of the lives they have lost. 
 
 ![game starts screen](assets/images/game-starts-screen.jpg)
 
-*   As the user guesses letters, a record of all letters guessed with the shown. This will help the user ensure they do not guess the same letter again. 
+*   As the user guesses letters, a record of all letters guessed will be displayed. This will help the user ensure they do not guess the same letter again. 
 
 When a user selects a letter that is in the word, a message in green text will appear and if the user selects a letter that is not included in the word, a message in red text will appear
 
@@ -177,14 +175,14 @@ For all user inputs, the game runs a validation check to ensure the input is val
 
 ### Win game
 *   When the user correctly guesses the name of the country within their number of lives, they will be presented with a message saying they won 
-*   The user will also recieve a personalised message giving you a score for playing the game
+*   The user will also receive a personalised message giving you a score for playing the game
 *   The user will be asked if they want to play again
 
 ![win message](assets/images/win-message.jpg)
 
 ### Game Over
-*   When the user is unable to guess the name of the country within their number of lives, they will be presented with a message saying game over and identifing the word the user was trying to guess.
-*   The user will also recieve a personalised message giving you a score for playing the game
+*   When the user is unable to guess the name of the country within their number of lives, they will be presented with a message saying game over and identifying the word the user was trying to guess.
+*   The user will also receive a personalised message giving you a score for playing the game
 *   The user will be asked if they want to play again
 
 ![game over message](assets/images/game-over-message.jpg)
@@ -202,8 +200,8 @@ For all user inputs, the game runs a validation check to ensure the input is val
 ![play again - No](assets/images/play-again-no-screen.jpg)
 
 ### The users score
-*   Each time the user wins a game, they will recieve 10 points, if you user does not guess the word in the correct number of lives, there will receive 0 points.
-*   Once the user finishes the game, the points are saved in a googlesheet.
+*   Each time the user wins a game, they will receive 10 points, if you user does not guess the word in the correct number of lives, there will receive 0 points.
+*   Once the user finishes the game, the points are saved in a google sheet.
 
 ![google sheet](assets/images/scores-googlesheet.jpg)
 
@@ -211,7 +209,7 @@ For all user inputs, the game runs a validation check to ensure the input is val
 
 *   It would be nice to include a scoreboard so that user can compare their score. This could increase the challenge for users to try and beat their previous scores.
 
-*   The ability to guess the entire word and once word was guessed return option of playagain Y/N
+*   The ability to guess the entire word and once word was guessed return option of play again Y/N
 
 
 ## Testing
@@ -226,13 +224,13 @@ For all user inputs, the game runs a validation check to ensure the input is val
 ![lives.py](assets/images/pep8-lives.jpg)
 
 
-### Testing
+### Test cases
 
 Methods such as print() as the code was created was used to check for errors. This helped check everything was behaving as expected and functions such as generating the random word for the word being generated for the game correctly.
 
 **Manual test cases**
 
-List of manual test cases excuted following the code being deplayed to Heroku. All [User stories](#user-stories) are covered in this list of manual tests.
+A list of manual test cases were executed following the code being deployed to Heroku. All [User stories](#user-stories) are covered in this list of manual tests.
 
 | Feature            | Expected result               | Action       | Actual Result     |
 |--------------------|-------------------------------|--------------|-------------------|
@@ -242,11 +240,11 @@ List of manual test cases excuted following the code being deplayed to Heroku. A
 | User Input Name    | User to Input Name            | Enter        | Works as expected |
 | User Input number  | Not a letter or _ Message     | Enter        | Works as expected |
 | Hello {NAME}       | Displays On Enter             | N/A          | Works as expected |
-| Show Game Menu     | of User Name & Enter          | N/A          | Works as expected |
+| Show Game Menu     | Displays with Name            | N/A          | Works as expected |
 | Option 1           | Game to start                 | 1 & Enter    | Works as expected |
 | Game Starts        | Lives Displayed               | N/A          | Works as expected |
 | Game Starts        | Hidden Word Displayed         | N/A          | Works as expected |
-| Game Starts        | Gues a Letter & Input         | N/A          | Works as expected |
+| Game Starts        | Guess a Letter & Input        | N/A          | Works as expected |
 | Option 2           | Level Menu Displayed          | 2 & Enter    | Works as expected |
 | Level Menu e       | Game To Start                 | e & Enter    | Works as expected |
 | Game Starts        | Lives Displayed               | N/A          | Works as expected |
@@ -283,7 +281,7 @@ I asked friends and family to look at the site on their devices and report any i
 ### Bugs
 **Bugs encountered**
 
-Being new to python, I did have many syntax errors, indent errors, white space errors and my lines of code were to long, these were all fixed as I was coding.
+Being new to python, I did have many syntax errors, indent errors, white space errors and my lines of code were too long, these were all fixed as I was coding.
 
 Some examples of other bugs
 
@@ -366,7 +364,7 @@ To use a Google Sheets API, gspread and google-auth were imported. *google-auth*
 
 * random
 
-The *random* library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
+The *random* library was imported to access the built-in method of generating a random word selection from a defined list of words. The word selected is the secret words the user must guess in the game.
 
 *   os
 
@@ -384,7 +382,7 @@ The *os* library was imported to create a function to utilise the os.system to c
 
 *   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/)  - For adding ascii art.
 
-*   Mircosoft Visio - For creating the workflow diagram
+*   Microsoft  Visio - For creating the workflow diagram
 
 *   Movavi video editor - To create a video of the application working
 
@@ -394,10 +392,10 @@ The *os* library was imported to create a function to utilise the os.system to c
 ## Credits
 
 ### Code
-*   [Youtube video tutorial](https://www.youtube.com/watch?v=5x6iAKdJB6U)
+*   [YouTube video tutorial](https://www.youtube.com/watch?v=5x6iAKdJB6U)
 *   [StackOverflow](https://stackoverflow.com)
 *   [101 computing](https://www.101computing.net/python-typing-text-effect/) for the clear screen code
-*   [Main fucntion](https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes) to execute code when the file runs as a script
+*   [Main function](https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes) to execute code when the file runs as a script
 *   [Exit function](https://www.scaler.com/topics/exit-in-python/)
 
 ### Other resources used
