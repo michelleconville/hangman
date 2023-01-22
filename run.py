@@ -285,7 +285,7 @@ def update_scores(name, score):
     Update the score to scoreboard
     """
     scoreboard.append_row([name, score])
-    print(f"Final Score: Hi {name}, your score is {score}")
+    print(f"Hi {name}, your score is {score}")
 
 
 def restart_game(num_lives):
