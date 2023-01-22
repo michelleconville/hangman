@@ -306,7 +306,7 @@ def restart_game(num_lives):
             elif restart == "n":
                 game_restart = True
                 print("\n")
-                main()
+                exit()
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"Please type either y or n,"
