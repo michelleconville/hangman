@@ -269,10 +269,12 @@ List of manual test cases excuted following the code being deplayed to Heroku. A
 | During Game Play   | Not a letter or _ Message     | N/A          | Works as expected |
 | During Game Play   | More than 1 letter Message    | N/A          | Works as expected |
 | Game Play Won      | You Won & Play Again Message  | N/A          | Works as expected |
+| Show score         | Score displays                | N/A          | Works as expected |
 | Game Play Lost     | You Lost & Play Again Message | N/A          | Works as expected |
 | Play Again Message | Option to Select Y or No      | Y / N        | Works as expected |
+| Show score         | Score displays                | N/A          | Works as expected |
 | Play Y Input       | Returns to Main Menu          | Y & Enter    | Works as expected |
-| Play N Input       | Returns to Main Menu          | N & Enter    | Works as expected |
+| Play N Input       | Exit game                     | N & Enter    | Works as expected |
 
 **Further testing**
 
