@@ -79,26 +79,27 @@ def start_game():
     print("Press 1 to Start playing game")
     print("Press 2 to Choose a difficulty level")
     print("Press 3 to Read the rules")
-    while True:
+    options = False
+    while not options:
         settings = input("\n ")
         if settings == "1":
+            options = True
             clear_screen()
             difficulty = "default"
             return difficulty
 
         elif settings == "2":
+            options = True
             clear_screen()
-            select_game_level()
 
         elif settings == "3":
+            options = True
             clear_screen()
             game_rules()
 
         else:
             print(f'{Fore.RED+Style.BRIGHT}Please select 1,'
                   ' 2 or 3 to make your choice.\n')
-            continue
-        clear_screen()
 
 
 def select_game_level():
@@ -305,7 +306,7 @@ def restart_game(num_lives):
             elif restart == "n":
                 game_restart = True
                 print("\n")
-                exit()
+                main()
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"Please type either y or n,"
