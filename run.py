@@ -79,27 +79,25 @@ def start_game():
     print("Press 1 to Start playing game")
     print("Press 2 to Choose a difficulty level")
     print("Press 3 to Read the rules")
-    options = False
-    while not options:
+    while True:
         settings = input("\n ")
         if settings == "1":
-            options = True
             clear_screen()
             difficulty = "default"
             return difficulty
 
         elif settings == "2":
-            options = True
             clear_screen()
+            select_game_level()
 
         elif settings == "3":
-            options = True
             clear_screen()
             game_rules()
 
         else:
             print(f'{Fore.RED+Style.BRIGHT}Please select 1,'
                   ' 2 or 3 to make your choice.\n')
+            continue
         clear_screen()
 
 
@@ -280,13 +278,13 @@ def win_game():
     print(Fore.GREEN+Style.BRIGHT + win)
 
 
-def update_scores(NAME, score):
+def update_scores(name, score):
     """
     Add 10 points when complete the game and 0 points if lose the game.
     Update the score to scoreboard
     """
-    scoreboard.append_row([NAME, score])
-    print(f"Final Score: Hi {NAME}, your score is {score}")
+    scoreboard.append_row([name, score])
+    print(f"Final Score: Hi {name}, your score is {score}")
 
 
 def restart_game(num_lives):
@@ -307,7 +305,7 @@ def restart_game(num_lives):
             elif restart == "n":
                 game_restart = True
                 print("\n")
-                main()
+                exit()
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
                                  f"Please type either y or n,"
