@@ -30,9 +30,31 @@ scoreboard = SHEET.worksheet("scores")
 data = scoreboard.get_all_values()
 
 
+def name_generator():
+    """
+    Checks the user entered a valid name.
+    Only accepts letters ad dispays error message if requirements don't match
+    """
+    global NAME
+    NAME = " "
+    while True:
+        NAME = input("Please enter your name: \n")
+
+        if NAME.isalpha() is not True:
+            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
+                  ' only contain letters.\n')
+        else:
+            print("\n")
+            print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {NAME}!')
+            return NAME
+    print("\n")
+    print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {NAME}!')
+
+    return NAME
+
+
 def game_intro():
     '''
-    Game graphic text from http://www.figlet.org/
     Game welcome and request users name and prints Hello name
     '''
     title = pyfiglet.figlet_format(
@@ -44,17 +66,7 @@ def game_intro():
     print(Fore.BLUE+Style.BRIGHT + title)
     print(Fore.MAGENTA+Style.BRIGHT + title2)
     print("HELLO Player")
-    name = " "
-    while True:
-        name = input("Please enter your name: \n")
-
-        if name.isalpha() is not True:
-            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
-                  ' only contain letters.\n')
-        else:
-            print("\n")
-            print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
-            return name
+    name_generator()
 
 
 def start_game():
@@ -176,6 +188,7 @@ def play_game(word, num_lives):
     """
     Runs the game and starts all the gameplay logic.
     """
+    score = 0
     word_to_guess = '_' * len(word)
     game_over = False
     guesses = []
@@ -234,10 +247,15 @@ def play_game(word, num_lives):
     if game_over:
         print(f'Well done! You guessed the word: {word}')
         win_game()
+        score += 10
+        update_scores(NAME, score)
+
     else:
         print('You have no lives left.')
         print(f'The word you were looking for was: {word}')
         game_end()
+        score = 0
+        update_scores(NAME, score)
 
     restart_game(num_lives)
 
