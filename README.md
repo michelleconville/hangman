@@ -324,7 +324,7 @@ The steps to clone a repository are as follows:
 The repository will now be cloned on your local machine for use.
 
 ### Herouku
-Before deploying to Heroku pip3 freeze > requirements.txt was used to add Colorama imports for deployment
+Before deploying to Heroku `pip3 freeze > requirements.txt` was used to add the neccessary imports for deployment. See [Python Libraries](#python-libraries) for a full list.
 
 #### Setting up a new app
 1. Log in to [Heroku]( https://id.heroku.com/login) 
@@ -353,14 +353,18 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 
 
 ## Libraries and Technologies Used
-**Language used**
+### Language used
 *   Python - The game logic was created using Python.
 
-**Python Libraries**
+### Python Libraries
 
 * gspread and google-auth
 
 To use a Google Sheets API, gspread and google-auth were imported. *google-auth* is needed to access our Google Cloud project, to connect spreadsheet with the project. The *gspread* library is needed to access, update and retrieve data in our spreadsheet
+
+To install these the follow command needs to be run 
+
+`pip3 install gspread google-auth`
 
 * random
 
@@ -370,17 +374,29 @@ The *random* library was imported to access the built-in method of generating a 
 
 The *os* library was imported to create a function to utilise the os.system to clear the terminal. This supports a positive user experience on game replay by clearing the previous gameplay and making the screen clearer and more structured.
 
-**Other**
+*   [Colorama](https://pypi.org/project/colorama/) 
+
+This was installed to add colour to the text in the terminal. For more information read the [Aesthetic Design](#aesthetic-design) section
+
+To install it in github, the follow command needs to be run:
+
+`pip install colorama`
+
+*   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/) 
+
+This was install for adding ascii art. For more information read the [Aesthetic Design](#aesthetic-design) section
+
+To install it in github, the follow command needs to be run:
+
+`pip install pyfiglet==0.7`
+
+### Other
 
 *   GitHub - Source code is hosted on GitHub.
 
 *   Gitpod - Used to commit and push code during the development of the project.
 
 *   Heroku - To the deploy the code to a online terminal
-
-*   [Colorama](https://pypi.org/project/colorama/) - For adding colour to fonts.
-
-*   [Pyfiglet](https://pypi.org/project/pyfiglet/0.7/)  - For adding ascii art.
 
 *   Microsoft  Visio - For creating the workflow diagram
 
