@@ -3,6 +3,8 @@ Used for libraries and imports
 """
 import random  # Randomly selects a word for the game
 import os  # Used to clear screen
+import gspread
+from google.oauth2.service_account import Credentials
 import pyfiglet  # import pyfiglet module for ascii art
 import colorama  # Adds color to game text
 from colorama import Fore, Style
@@ -10,10 +12,49 @@ from lives import lives_left  # Hangman lives visual from lives.py
 
 colorama.init(autoreset=True)
 
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive",
+]
+
+"""
+Assign credentials from our API's and access our words spreadsheet
+"""
+CREDS = Credentials.from_service_account_file("creds.json")
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open("hangman_game")
+
+scoreboard = SHEET.worksheet("scores")
+data = scoreboard.get_all_values()
+
+
+def name_generator():
+    """
+    Checks the user entered a valid name.
+    Only accepts letters ad dispays error message if requirements don't match
+    """
+    global NAME
+    NAME = " "
+    while True:
+        NAME = input("Please enter your name: \n")
+
+        if NAME.isalpha() is not True:
+            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
+                  ' only contain letters.\n')
+        else:
+            print("\n")
+            print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {NAME}!')
+            return NAME
+    print("\n")
+    print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {NAME}!')
+
+    return NAME
+
 
 def game_intro():
     '''
-    Game graphic text from http://www.figlet.org/
     Game welcome and request users name and prints Hello name
     '''
     title = pyfiglet.figlet_format(
@@ -25,17 +66,7 @@ def game_intro():
     print(Fore.BLUE+Style.BRIGHT + title)
     print(Fore.MAGENTA+Style.BRIGHT + title2)
     print("HELLO Player")
-    name = " "
-    while True:
-        name = input("Please enter your name: \n")
-
-        if name.isalpha() is not True:
-            print(f'{Fore.RED+Style.BRIGHT}Error: Your name must'
-                  ' only contain letters.\n')
-        else:
-            print("\n")
-            print(f'{Fore.MAGENTA+Style.BRIGHT}Hello {name}!')
-            return name
+    name_generator()
 
 
 def start_game():
@@ -157,6 +188,7 @@ def play_game(word, num_lives):
     """
     Runs the game and starts all the gameplay logic.
     """
+    score = 0
     word_to_guess = '_' * len(word)
     game_over = False
     guesses = []
@@ -215,10 +247,15 @@ def play_game(word, num_lives):
     if game_over:
         print(f'Well done! You guessed the word: {word}')
         win_game()
+        score += 10
+        update_scores(NAME, score)
+
     else:
         print('You have no lives left.')
         print(f'The word you were looking for was: {word}')
         game_end()
+        score = 0
+        update_scores(NAME, score)
 
     restart_game(num_lives)
 
@@ -241,6 +278,15 @@ def win_game():
     """
     win = pyfiglet.figlet_format("YOU WIN", font="standard", justify="center")
     print(Fore.GREEN+Style.BRIGHT + win)
+
+
+def update_scores(NAME, score):
+    """
+    Add 10 points when complete the game and 0 points if lose the game.
+    Update the score to scoreboard
+    """
+    scoreboard.append_row([NAME, score])
+    print(f"Final Score: Hi {NAME}, your score is {score}")
 
 
 def restart_game(num_lives):
