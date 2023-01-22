@@ -116,7 +116,7 @@ Once the user enters their name correctly, they will be welcomed and presented w
 
 The game is designed to require an input of numbers at this point, if the user enters anything other than 1, 2 or 3 they will get an error message.
 
-INSERT ERROR
+![game menu error](assets/images/game-menu-error.jpg)
 
 ### Press 1: Start playing
 If the user presses 1 the game will start, the difficulty level will default to the easy level.
@@ -135,7 +135,7 @@ If the user presses 2 they will be asked to select a level to play at:
 
 *   The game is designed to require an input of letters at this point, if the user enters anything other than e, n or h they will get an error message.
 
-INSERT IMAGES
+![difficulty level error](assets/images/difficulty-level-error.jpg)
 
 *   Once the user makes a selection, they will be brought straight to the game at that level.
 *   The number of lives will display, and the user will be asked to guess a letter
@@ -334,7 +334,10 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add Colora
 5. Click on the **Create App** button.
 
 #### Updating the settings 
-* Click on the **Settings Tab** and scroll down to **Add Buildpack** 
+* Click on the **Settings Tab** 
+* Scroll down to **Config Vars**
+* Add CREDS to the **key** field and in the **value** field, paste in the details of the creds.json and **Add** button.
+* Scroll down to **Add Buildpack** 
 * Select **python** and click **Save Changes**, then add **node.js**.
 * **Note:** The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
 
@@ -353,7 +356,7 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 **Language used**
 *   Python - The game logic was created using Python.
 
-**Built-in Python Libraries**
+**Python Libraries**
 
 * gspread and google-auth
 
@@ -392,7 +395,8 @@ The *os* library was imported to create a function to utilise the os.system to c
 *   [Youtube video tutorial](https://www.youtube.com/watch?v=5x6iAKdJB6U)
 *   [StackOverflow](https://stackoverflow.com)
 *   [101 computing](https://www.101computing.net/python-typing-text-effect/) for the clear screen code
-*   [main fucntion](https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes) to execute code when the file runs as a script
+*   [Main fucntion](https://realpython.com/if-name-main-python/#:~:text=Nesting%20code%20under%20if%20__,defined%2C%20but%20no%20code%20executes) to execute code when the file runs as a script
+*   [Exit function](https://www.scaler.com/topics/exit-in-python/)
 
 ### Other resources used
 *   [gibbo101](https://github.com/gibbo101/hangman/blob/main/README.md)
