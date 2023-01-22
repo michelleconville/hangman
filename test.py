@@ -280,6 +280,15 @@ def win_game():
     print(Fore.GREEN+Style.BRIGHT + win)
 
 
+def update_scores(NAME, score):
+    """
+    Add 10 points when complete the game and lose 10 points if lose the game.
+    Update the score to scoreboard
+    """
+    scoreboard.append_row([NAME, score])
+    print(f"Final Score: Hi {NAME}, your score is {score}")
+
+
 def restart_game(num_lives):
     """
     Gives the user the option to restart the game or return to main screen
