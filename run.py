@@ -306,6 +306,8 @@ def restart_game(num_lives):
             elif restart == "n":
                 game_restart = True
                 print("\n")
+                print('You are now exiting the game... \n')
+                print("Goodbye \n")
                 exit()
             else:
                 raise ValueError(f"{Fore.RED+Style.BRIGHT}"
