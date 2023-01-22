@@ -3,7 +3,7 @@ Used for libraries and imports
 """
 import random  # Randomly selects a word for the game
 import os  # Used to clear screen
-import gspread
+import gspread  # Access google sheets
 from google.oauth2.service_account import Credentials
 import pyfiglet  # import pyfiglet module for ascii art
 import colorama  # Adds color to game text

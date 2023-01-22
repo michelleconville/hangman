@@ -176,13 +176,15 @@ For all user inputs, the game runs a validation check to ensure the input is val
 ![game starts screen](assets/images/number-entered.jpg)
 
 ### Win game
-*   When the user correctly guesses the name of the country within their number of lives, they will be presented with a message saying they won
+*   When the user correctly guesses the name of the country within their number of lives, they will be presented with a message saying they won 
+*   The user will also recieve a personalised message giving you a score for playing the game
 *   The user will be asked if they want to play again
 
 ![win message](assets/images/win-message.jpg)
 
 ### Game Over
 *   When the user is unable to guess the name of the country within their number of lives, they will be presented with a message saying game over and identifing the word the user was trying to guess.
+*   The user will also recieve a personalised message giving you a score for playing the game
 *   The user will be asked if they want to play again
 
 ![game over message](assets/images/game-over-message.jpg)
@@ -195,10 +197,15 @@ For all user inputs, the game runs a validation check to ensure the input is val
 
 ![play again - yes](assets/images/play-again-yes-screen.jpg)
 
-*   If they select N for No, they will be presented with the welcome screen
+*   If they select N for No, the user will be presented with a message advising the user that they are exiting the program
 
 ![play again - No](assets/images/play-again-no-screen.jpg)
 
+### The users score
+*   Each time the user wins a game, they will recieve 10 points, if you user does not guess the word in the correct number of lives, there will receive 0 points.
+*   Once the user finishes the game, the points are saved in a googlesheet.
+
+![google sheet](assets/images/scores-googlesheet.jpg)
 
 ### Future features to be implemented
 
@@ -348,13 +355,17 @@ Scroll to the bottom of the deploy page and select preferred deployment type:
 
 **Built-in Python Libraries**
 
+* gspread and google-auth
+
+To use a Google Sheets API, gspread and google-auth were imported. *google-auth* is needed to access our Google Cloud project, to connect spreadsheet with the project. The *gspread* library is needed to access, update and retrieve data in our spreadsheet
+
 * random
 
-The random library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
+The *random* library was imported to access the built-in method of generating a random word selection from a difined list of words. The word selected is the secret words the user must gusess in the game.
 
 *   os
 
-The os library was imported to create a function to utilise the os.system to clear the terminal. This supports a positive user experience on game replay by clearing the previous gameplay and making the screen clearer and more structured.
+The *os* library was imported to create a function to utilise the os.system to clear the terminal. This supports a positive user experience on game replay by clearing the previous gameplay and making the screen clearer and more structured.
 
 **Other**
 
